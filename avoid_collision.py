@@ -4,10 +4,38 @@ import matplotlib.animation as animation
 from matplotlib import patches
 import bisect
 
-#その場で回転を考えていない。考える場合方程式に解けなくなって、シミュレーションすることになり、相当めんどくさくなりそう。
+
+class decide_angle():
+    
+    def calculate(self, robotV:float, robotW:float, human_verocities:list, humanpositions:list, angle_num:int, targetid:int):
+        angles = [i * math.pi * 2 / angle_num for i in range(angle_num)]
+        ac = Avoid_collision()
+        for angle in angles:
+            candidate = ac.simulate_rotate_meet(robotV, robotW, human_verocities[i][0], human_verocities[i][1], humanpositions[i][0], humanpositions[i][1],127,  1/20, 10)
+        ans = []
+        for angle in candidate:
+            for i in range(len(human_verocities)):
+                if i == targetid:
+                    continue
+                else:
+                    if ac.angle_Simulation_rotate(robotV, robotW, human_verocities[i][0], human_verocities[i][1], humanpositions[i][0], humanpositions[i][1],angle,  1/20, 3):
+                        ans.append(angle)
+        
+        return ans
+
+
+
+#
 class Avoid_collision():
     #人のサイズ（半径）
     human_size = 0.25
+    meet_t = 1
+
+    def hanchoku(self, vx, vy, cx, cy):
+        if vx * cx + vy * cy < 0:
+            return cx ** 2 + cy ** 2
+        else:
+            return (cx ** 2 + cy ** 2) - ((cx * vx + cy * vy)**2) / (vx ** 2 + vy ** 2)
 
 
     def calculate(self, robotV, humanvx, humanvy, humanpositionR, humanpositiontheta):
@@ -223,12 +251,46 @@ class Avoid_collision():
             t = i * min_t
             posX = X + humanvx * t
             posY = Y + humanvy * t
-            robX = robotV * math.cos(angle) * (t - abs(angle) / robotW)
-            robY = robotV * math.sin(angle) * (t - abs(angle) / robotW)
+            if t - abs(angle)/robotW < 0:
+                robX = 0
+                robY = 0
+            else:
+                robX = robotV * math.cos(angle) * (t - abs(angle) / robotW)
+                robY = robotV * math.sin(angle) * (t - abs(angle) / robotW)
             dis = (posX - robX) ** 2 + (posY - robY) ** 2
             if dis < Avoid_collision.human_size ** 2:
                 return False
         return True
+    
+    def angle_Simulation_rotate_meet(self, robotV, robotW, humanvx, humanvy, humanpositionR, humanpositiontheta, angle, min_t, max_t):
+        """
+        衝突せずに会えるTrue、衝突するFalse、衝突しないけど会えないFalse
+        """
+        X = humanpositionR * math.cos(humanpositiontheta)
+        Y = humanpositionR * math.sin(humanpositiontheta)
+        if X * (humanvx - robotV*math.cos(angle)) > 0 or Y * (humanvy - robotV * math.sin(angle)) > 0:
+            return False
+        for i in range(int(max_t // min_t)):
+            t = i * min_t
+            posX = X + humanvx * t
+            posY = Y + humanvy * t
+            if t - abs(angle)/robotW < 0:
+                robX = 0
+                robY = 0
+                dis = (posX - robX) ** 2 + (posY - robY) ** 2
+            else:
+                robX = robotV * math.cos(angle) * (t - abs(angle) / robotW)
+                robY = robotV * math.sin(angle) * (t - abs(angle) / robotW)
+                dis = (posX - robX) ** 2 + (posY - robY) ** 2
+            if dis > Avoid_collision.human_size ** 2:
+                targetX = posX + humanvx * Avoid_collision.meet_t
+                targetY = posY + humanvy * Avoid_collision.meet_t
+                dis0 = self.hanchoku(humanvx, humanvy, robX-targetX, robY-targetY)
+                if dis0 < (Avoid_collision.human_size/2) ** 2:
+                    return True
+            else:
+                return False
+        return False
     
     def simulate(self, robotV, humanvx, humanvy, humanpositionR, humanpositiontheta, angle_num, min_t, max_t):
         """
@@ -248,7 +310,7 @@ class Avoid_collision():
     
     def simulate_rotate(self, robotV, robotW,  humanvx, humanvy, humanpositionR, humanpositiontheta, angle_num, min_t, max_t):
         """
-        衝突する角度をreturnする\n
+        衝突する角度をreturnする\n 衝突する
         回転を考慮
         """
         angles = [i * math.pi * 2 / angle_num for i in range(angle_num)]
@@ -257,17 +319,29 @@ class Avoid_collision():
             if not self.angle_Simulation_rotate(robotV, robotW, humanvx, humanvy, humanpositionR, humanpositiontheta, angle, min_t, max_t):
                 ans.append(angle)
         return ans
-    
+
+    def simulate_rotate_meet(self, robotV, robotW,  humanvx, humanvy, humanpositionR, humanpositiontheta, angle_num, min_t, max_t):
+        """
+        会える角度をreturnする\n
+        回転を考慮
+        """
+        angles = [i * math.pi * 2 / angle_num for i in range(angle_num)]
+        ans = []
+        for angle in angles:
+            if self.angle_Simulation_rotate_meet(robotV, robotW, humanvx, humanvy, humanpositionR, humanpositiontheta, angle, min_t, max_t):
+                ans.append(angle)
+        return ans
 
     
     def illust_simulation(self):
-        x = 2
-        y = -2
+        x = 5
+        y = -5
         vx = -1
-        vy = -0.1
+        vy = 0
         robotV = 1
-        angles = self.simulate_rotate(robotV, 5, vx, vy, (x**2+ y**2) ** (1/ 2), math.atan2(y, x), 72, 1/6, 7)
-        minphi, maxphi = angles[0]-math.pi/36, angles[-1]+math.pi/36
+        robotW = 5
+        angles = self.simulate_rotate_meet(robotV, robotW, vx, vy, (x**2+ y**2) ** (1/ 2), math.atan2(y, x), 128, 1/10, 10)
+        minphi, maxphi = angles[0], angles[-1]
         hs = Avoid_collision.human_size
         
         
@@ -285,9 +359,11 @@ class Avoid_collision():
         plt.ylim([-5.5, 5.5])
         plt.grid()
         plt.show()
-        print(maxphi, abs(maxphi) / 5)
-        self.animationC(x, y, vx, vy, maxphi, robotV, 5)
-        self.animationC(x, y, vx, vy, minphi, robotV, 5)
+        print(len(angles))
+        for i in range(0, len(angles), len(angles)//3):
+            self.animationC(x, y, vx, vy, angles[i], robotV, robotW)
+        """self.animationC(x, y, vx, vy, maxphi, robotV, robotW)
+        self.animationC(x, y, vx, vy, minphi, robotV, robotW)"""
 
 
 ac = Avoid_collision()

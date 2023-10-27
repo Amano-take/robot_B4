@@ -1,0 +1,13 @@
+Modify the path of the rviz config in the launch file.
+
+To run:
+ 
+Terminal 1: roslaunch students_related ht_camera_from_bag.launch 
+Terminal 2: rosbag play ht_and_camera.bag 
+
+Useful ros topics:
+    /human_tracked       <= Can be displayed by rviz 
+    /human_tracked_l2    <= HTEntityList cannot be displayed by rviz 
+    /tf
+    /tf_static
+    /usb_cam/image_raw/compressed

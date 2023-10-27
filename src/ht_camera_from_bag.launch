@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+<!-- ARGUMENTS -->
+<arg name="camera_pose" default="-0.115 -0.05 1.18 0 0 0"/>
+
+<!-- CAMERA TF -->
+<node pkg="tf2_ros" type="static_transform_publisher" name="camera_tf" args="$(arg camera_pose) base_link head_camera" />
+
+<!-- VISUALIZER -->
+<node pkg="rviz" type="rviz" name="rviz" args="--display-config $(find students_related)/rviz/ht_camera_from_bag.rviz">
+</node>
+
+</launch>

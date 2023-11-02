@@ -21,3 +21,5 @@ print(end-start)
 initial_np = np.array([[10, 12], [11, 12]])
 ans_np = np.repeat(initial_np, 10, axis = 0).reshape(np.shape(initial_np)[0], -1, 2)
 print(ans_np)
+
+x, y = [1, 2]

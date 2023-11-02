@@ -9,6 +9,7 @@ project(amano_b4)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
+  layer2
   rospy
   sensor_msgs
   std_msgs

@@ -7,7 +7,7 @@
 <node pkg="tf2_ros" type="static_transform_publisher" name="camera_tf" args="$(arg camera_pose) base_link head_camera" />
 
 <!-- VISUALIZER -->
-<node pkg="rviz" type="rviz" name="rviz" args="--display-config $(find students_related)/rviz/ht_camera_from_bag.rviz">
+<node pkg="rviz" type="rviz" name="rviz" args="--display-config $(find amano_b4)/rviz/ht_camera_from_bag.rviz">
 </node>
 
 </launch>

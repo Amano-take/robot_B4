@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# 
+############################################################
+
 import math
 import time
 import numpy as np
@@ -11,21 +16,32 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import patches
 
-from visualization_msgs.msg import MarkerArray
-
+from geometry_msgs.msg import PoseArray
+from layer2.msg import HTEntityList
 
 class htreceiver():
     def __init__(self) -> None:
-        rospy.init_node("htreciever")
-        rospy.Subscriber("/ht_markers", MarkerArray, self._in_callback_ht, queue_size=1)
+        rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
         self.md = movement_decider()
+        self.start = time.time()
+        self.start2 = None
+    #toDO
+    def _in_callback_ht(self, msg:HTEntityList):
+        now = msg.header.stamp.nsecs * (10 ** (-9)) + msg.header.stamp.secs
+        rawlist = msg.list
+        htlist = []
+        for raw in rawlist:
+            htlist.append((raw.id, raw.unique_id, raw.x, raw.y))
+        self.md.htreceive_wrapper((now, htlist))
 
-    def _in_callback_ht(self, msg:MarkerArray):
-        print(msg)
+        
 
     def run(self):
         rospy.loginfo("Start receiver")
         rospy.spin()
+    
+    def stop(self):
+        exit(-1)
 
 class movement_decider():
     robotV = 1
@@ -37,16 +53,29 @@ class movement_decider():
     def __init__(self) -> None:
         self.ht2l = ht2list()
         self.angles = [i * math.pi * 2 / movement_decider.angle_num for i in range(movement_decider.angle_num)]
-        self.robx, self.roby = 0, 0
+        self.robxya = (0, 0, 0)
+        self.targetid = -1
+        self.id2index = ddict(int)
+    
+    def htreceive_wrapper(self, htoutput):
+        """
+        indexが想像していたものでなかったため、変換するラッパークラス
+        """
+        t, htlist = htoutput
+        for id, unique, x, y in htlist:
+            if id in self.id2index.keys():
+                self.ht2l.singleht2list((t, self.id2index[id], unique, x, y))
+            else:
+                index = self.ht2l.unoccupied_num(t)
+                print(index)
+                self.id2index[id] = index
+                self.ht2l.singleht2list((t, index, unique, x, y))
+        self.htreveived(t)
 
-    def htreveive(self, htoutput):
-        t, _ = htoutput
-        self.ht2l.ht2list(htoutput)
+    def htreveived(self, t):
         prediction_pos = self.ht2l.prediction_move(t, movement_decider.min_t, movement_decider.max_t)
         humanvxys = self.ht2l.cal_vel(t)
-        
-        return self.can_meet(self, prediction_pos, humanvxys)
-
+        return self.can_meet(prediction_pos, humanvxys)
 
     def robreceive(self, roboutput):
         self.robxya = roboutput
@@ -65,8 +94,8 @@ class movement_decider():
         """
         robotV = movement_decider.robotV
         robotW = movement_decider.robotW
-        robxy = self.robxya[0:3]
-        nowangle = self.robxya[3]
+        robxy = self.robxya[0:2]
+        nowangle = self.robxya[2]
         min_t = movement_decider.min_t
         max_t = movement_decider.max_t
         targetid = self.targetid
@@ -83,6 +112,7 @@ class movement_decider():
                 ans.append(True)
             else:
                 ans.append(False)
+        print(ans)
         if targetid == -1:
             return ans, None
         else:
@@ -152,8 +182,8 @@ class movement_decider():
 
             if dis > ht2list.human_size ** 2:
                 try:
-                    targetX = pos_list[i+ht2list.meet_t_index]
-                    targetY = pos_list[i+ht2list.meet_t_index]
+                    targetX = pos_list[i+ht2list.meet_t_index][0]
+                    targetY = pos_list[i+ht2list.meet_t_index][1]
                 except:
                     break
                 dis0 = self.hanchoku(humanvx, humanvy, robX-targetX, robY-targetY)
@@ -164,7 +194,7 @@ class movement_decider():
         
         return False, 0
     
-    def angle_Simulation_rotate(self, robotV, robotW, robxy, pos_list, humanvxy, angle, nowangle, min_t, max_t):
+    def angle_Simulation_rotate(self, robotV, robotW, robxy, pos_list:list, humanvxy, angle, nowangle, min_t, max_t):
         """
         シミュレーションしてやっていく、、衝突しない場合True\n
         回転を考慮する
@@ -184,8 +214,7 @@ class movement_decider():
 
         for i in range(int(max_t // min_t)):
             t = i * min_t
-            posX = pos_list[i]
-            posY = pos_list[i]
+            posX, posY = pos_list[i]
             if abs(angle - nowangle) >= robotW * min_t / 2:
                 if angle > nowangle:
                     nowangle += robotW * min_t
@@ -229,11 +258,14 @@ class movement_decider():
         if vx * cx + vy * cy < 0:
             return cx ** 2 + cy ** 2
         else:
-            return (cx ** 2 + cy ** 2) - ((cx * vx + cy * vy)**2) / (vx ** 2 + vy ** 2)
+            try:
+                return (cx ** 2 + cy ** 2) - ((cx * vx + cy * vy)**2) / (vx ** 2 + vy ** 2)
+            except:
+                return cx ** 2 + cy ** 2
     
 class ht2list():
     max_list_len = 50
-    human_size = 2.0
+    human_size = 0.1
     meet_t = 0.5
     #min_t * meet_t_index = meet_t
     meet_t_index = 15
@@ -252,11 +284,25 @@ class ht2list():
         """
         t, htlist = htoutput
         for id, uniqueid, x, y in htlist:
-            if self.htlist[id].isSameHumanById(uniqueid):
-                self.htlist[id].add(t, x, y)
+            if self.htlist[id].isSameHuman((t, x, y)):
+                self.htlist[id].add((t, x, y))
             else:
                 self.htlist[id].clear(uniqueid)
-                self.htlist[id].add(t, x, y)
+                self.htlist[id].add((t, x, y))
+
+    def singleht2list(self, htoutput):
+        t, id, uniqueid, x, y = htoutput
+        if self.htlist[id].isSameHuman((t, x, y)):
+            self.htlist[id].add((t, x, y))
+        else:
+            self.htlist[id].clear(uniqueid)
+            self.htlist[id].add((t, x, y))
+
+    def unoccupied_num(self, t):
+        for i, htdeq in enumerate(self.htlist):
+            if not htdeq.is_occupied(t):
+                return i
+            
     
     def cal_vel(self, t):
         ans = []
@@ -289,28 +335,43 @@ class ht2list():
     
 
 class ht2deq():
-    length = 100
+    length = 80
     hv_tolerance = 3
     minimum_for_vel = 4
+    time_tolerance = 1
 
     def __init__(self, unique) -> None:
         self.deq = deque([])
         self.unique = unique
-        self.beftxy = None
-        self.aftxy = None
+        self.beftxy = [0, 0, 0]
+        self.aftxy = [0, 0, 0]
 
-    def add(self, *txy):
+    def add(self, txy):
         if len(self.deq) != ht2deq.length:
-            self.deq.append(tuple(txy))
+            self.deq.append(txy)
         else:
             minus = self.deq.popleft()
-            self.deq.appendleft(tuple(txy))
+            self.deq.append(txy)
             for i in range(3):
                 self.beftxy[i] -= minus[i]
                 self.beftxy[i] += self.deq[ht2deq.length // 2 - 1][i]
                 self.aftxy[i] -= self.deq[ht2deq.length // 2 - 1][i]
                 self.aftxy[i] += txy[i]
-            
+    
+    def is_occupied(self, now):
+        """
+        このリストが専有されているかどうかを返す。専有されているならTrue、されていないのならばFalse
+        """
+        if len(self.deq) == 0:
+            return False
+        else:
+            most_recent = self.deq[-1][0]
+            if now - most_recent > ht2deq.time_tolerance:
+                return False
+            else:
+                return True
+
+
     def calpose(self, t):
         if len(self.deq) == 0:
             return [100, 100]
@@ -325,7 +386,7 @@ class ht2deq():
         elif abs(t - self.deq[-1][0]) >= 1:
             return [0, 0]
         
-        if len(self.deq) == ht2deq.length and self.beftxy != None:
+        if len(self.deq) == ht2deq.length and self.beftxy[0] != 0:
             vel_x = (self.aftxy[1] - self.beftxy[1]) / (self.aftxy[0] - self.beftxy[0])
             vel_y = (self.aftxy[2] - self.beftxy[2]) / (self.aftxy[0] - self.beftxy[0])
         elif len(self.deq) == ht2deq.length:
@@ -364,6 +425,8 @@ class ht2deq():
             vel_y = (txy[2] - txy0[2]) / (txy[0] - txy0[0])
             if (vel_x ** 2 + vel_y ** 2) ** (1/2) > ht2deq.hv_tolerance:
                 return False
+            if txy[0] - txy0[0] > ht2deq.time_tolerance:
+                return False
         return True
 
     def isSameHumanById(self, uniqueid) -> bool:
@@ -375,8 +438,8 @@ class ht2deq():
     def clear(self, uniqueid):
         self.deq = deque([])
         self.unique = uniqueid
-        self.beftxy = None
-        self.aftxy = None
+        self.beftxy = [0, 0, 0]
+        self.aftxy = [0, 0, 0]
 
 
 class test():
@@ -420,8 +483,8 @@ class test():
 
 if __name__ == "__main__":
 	# Init ros, create and, run the node
-	rospy.init_node("ht_marker2stamp")
-	ht = htreceiver
+	rospy.init_node("make_path")
+	ht = htreceiver()
 	try:
 		ht.run()
 	except rospy.ROSInterruptException:

@@ -1,13 +1,33 @@
 <?xml version="1.0"?>
 <launch>
 <!-- ARGUMENTS -->
-<arg name="camera_pose" default="-0.115 -0.05 1.18 0 0 0"/>
+<!--arg name="camera_pose" default="-0.115 -0.05 1.18 0 0 0"/-->
+<arg name="camera_pose" default="-0.115 -0.05 1.18 -1.57 0.0 -1.57"/>
 
 <!-- CAMERA TF -->
 <node pkg="tf2_ros" type="static_transform_publisher" name="camera_tf" args="$(arg camera_pose) base_link head_camera" />
 
+<!-- DECOMPRESS  -->
+<node pkg="image_transport" type="republish" name="image_decompress" args="compressed raw">
+    <remap from="in" to="/usb_cam/image_raw"/>
+    <remap from="out" to="/usb_cam/image_raw"/>
+</node>
+
+<!-- CAMERA INFO -->
+<node pkg="amano_b4" type="yaml_to_camera_info_publisher.py" name="camera_info_publisher">
+    <param name="filename" value="$(find amano_b4)/config/camera_info.yaml"/>
+    <remap from="camera_info" to="usb_cam/camera_info"/>
+</node>
+
 <!-- VISUALIZER -->
 <node pkg="rviz" type="rviz" name="rviz" args="--display-config $(find amano_b4)/rviz/ht_camera_from_bag.rviz">
 </node>
+
+<!-- PUBLISH TARGET -->
+<node pkg="amano_b4" type="interface_with_image.py" name="pub_target">
+</node>
+
+<!-- SHOW IMAGE -->
+<node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/usb_cam/image_raw"/>
 
 </launch>

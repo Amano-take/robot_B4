@@ -8,7 +8,7 @@ import time
 import numpy as np
 import random
 import rospy
-
+import tf
 from collections import deque
 from collections import defaultdict as ddict
 
@@ -17,24 +17,62 @@ import matplotlib.animation as animation
 from matplotlib import patches
 
 from geometry_msgs.msg import PoseArray
+from geometry_msgs.msg import Twist, PointStamped, PoseStamped
 from layer2.msg import HTEntityList
+from tf2_msgs.msg import TFMessage
+from std_msgs.msg import String
 
 class htreceiver():
     def __init__(self) -> None:
         rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
+        rospy.Subscriber("/target_id_raw", String, self._in_callback_target, queue_size=1)
         self.md = movement_decider()
         self.start = time.time()
         self.start2 = None
     #toDO
     def _in_callback_ht(self, msg:HTEntityList):
+        nowposition = self.robotpostion()
+        x, y = nowposition.pose.position.x, nowposition.pose.position.y
+        w, z = nowposition.pose.orientation.w, nowposition.pose.orientation.z
+        if z > 0:
+            a = math.acos(w) * 2
+        else:
+            a = math.acos(-w) * 2
+        self.md.robreceive((x, y, a))
+
         now = msg.header.stamp.nsecs * (10 ** (-9)) + msg.header.stamp.secs
         rawlist = msg.list
         htlist = []
         for raw in rawlist:
             htlist.append((raw.id, raw.unique_id, raw.x, raw.y))
-        self.md.htreceive_wrapper((now, htlist))
+        ans1, ans2 = self.md.htreceive_wrapper((now, htlist))
+        print(ans2)
 
-        
+    def _in_callback_target(self, msg:String):
+        """
+        HTのidを採用: リストのインデックスではないことに注意
+        """
+        try:
+            targetid = int(msg)
+            self.md.targetreceive(targetid)
+        except:
+            print("error targetid")
+
+    def robotpostion(self):
+        listener = tf.TransformListener()
+        ps = PoseStamped()
+        ps.header.frame_id = "base_link"
+        ps.header.stamp = rospy.Time()
+        ps.pose.position.x = 0
+        ps.pose.position.y = 0
+        ps.pose.position.z = 0
+        ps.pose.orientation.w = 1
+        try:
+            listener.waitForTransform("map", "base_link", rospy.Time(), rospy.Duration(10))
+            tf_position = listener.transformPose("map", ps)
+        except:
+            print("error tf")
+        return ps
 
     def run(self):
         rospy.loginfo("Start receiver")
@@ -70,7 +108,7 @@ class movement_decider():
                 print(index)
                 self.id2index[id] = index
                 self.ht2l.singleht2list((t, index, unique, x, y))
-        self.htreveived(t)
+        return self.htreveived(t)
 
     def htreveived(self, t):
         prediction_pos = self.ht2l.prediction_move(t, movement_decider.min_t, movement_decider.max_t)
@@ -81,7 +119,10 @@ class movement_decider():
         self.robxya = roboutput
 
     def targetreceive(self, targetid):
-        self.targetid = targetid
+        if targetid == -1:
+            self.targetid = -1
+        else:
+            self.targetid = self.id2index[targetid]
     
     def targetreset(self):
         self.targetid = -1
@@ -112,7 +153,7 @@ class movement_decider():
                 ans.append(True)
             else:
                 ans.append(False)
-        print(ans)
+        print(ans[0:2])
         if targetid == -1:
             return ans, None
         else:
@@ -264,7 +305,7 @@ class movement_decider():
                 return cx ** 2 + cy ** 2
     
 class ht2list():
-    max_list_len = 50
+    max_list_len = 16
     human_size = 0.1
     meet_t = 0.5
     #min_t * meet_t_index = meet_t
@@ -291,12 +332,11 @@ class ht2list():
                 self.htlist[id].add((t, x, y))
 
     def singleht2list(self, htoutput):
+        """
+        listのidを採用
+        """
         t, id, uniqueid, x, y = htoutput
-        if self.htlist[id].isSameHuman((t, x, y)):
-            self.htlist[id].add((t, x, y))
-        else:
-            self.htlist[id].clear(uniqueid)
-            self.htlist[id].add((t, x, y))
+        self.htlist[id].add((t, x, y))
 
     def unoccupied_num(self, t):
         for i, htdeq in enumerate(self.htlist):
@@ -332,10 +372,14 @@ class ht2list():
         ans_np = ans_np + time_np * vel_np
         return ans_np.tolist()
 
-    
+    def pos_and_vel_with_index(self, index:int, t):
+        htd = self.htlist[index]
+        vx, vy = htd.calvel(t)
+        _, x, y = htd.xy()
+        return x, y, vx, vy
 
 class ht2deq():
-    length = 80
+    length = 16
     hv_tolerance = 3
     minimum_for_vel = 4
     time_tolerance = 1
@@ -346,7 +390,14 @@ class ht2deq():
         self.beftxy = [0, 0, 0]
         self.aftxy = [0, 0, 0]
 
+    def xy(self):
+        t, x, y = self.deq[-1]
+        return t, x, y
+
     def add(self, txy):
+        if not self.isSameHuman(txy):
+            self.clear(0)
+        
         if len(self.deq) != ht2deq.length:
             self.deq.append(txy)
         else:
@@ -386,10 +437,11 @@ class ht2deq():
         elif abs(t - self.deq[-1][0]) >= 1:
             return [0, 0]
         
-        if len(self.deq) == ht2deq.length and self.beftxy[0] != 0:
+        #理論上うまく行くはずなのになぜかうまく行かず。バグの原因もわからず。そこまで計算量的に厳しいわけでもないので、緩めに設定することに
+        """if len(self.deq) == ht2deq.length and self.beftxy[0] != 0:
             vel_x = (self.aftxy[1] - self.beftxy[1]) / (self.aftxy[0] - self.beftxy[0])
-            vel_y = (self.aftxy[2] - self.beftxy[2]) / (self.aftxy[0] - self.beftxy[0])
-        elif len(self.deq) == ht2deq.length:
+            vel_y = (self.aftxy[2] - self.beftxy[2]) / (self.aftxy[0] - self.beftxy[0])"""
+        if len(self.deq) == ht2deq.length:
             for i, txy in enumerate(self.deq):
                 if i >= ht2deq.length // 2:
                     for j in range(3):
@@ -403,10 +455,10 @@ class ht2deq():
             locaftxy = [0] * 3
             locbeftxy = [0] * 3
             for i, txy in enumerate(self.deq):
-                if i >= len(self.deq) // 2:
+                if i >= len(self.deq) // 2 and i < 2*(len(self.deq) // 2):
                     for j in range(3):
                         locaftxy[j] += txy[j]
-                else:
+                elif i < len(self.deq) // 2:
                     for j in range(3):
                         locbeftxy[j] += txy[j]
             vel_x = (locaftxy[1] - locbeftxy[1]) / (locaftxy[0] - locbeftxy[0])

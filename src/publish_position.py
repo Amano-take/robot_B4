@@ -62,12 +62,15 @@ class pubposition():
         except Exception as e:
             print("Missing", e)
             self._pub_missing_notification.publish(str("Missing"))
+            self._pub.publish(self.robotpostion())
         
         try:   
             dest = self.md.go_target(self.now)
             x, y, a = dest
             if a is None:
-                 a = - self.poselist[targetid]
+                 a = ( self.poselist[targetid] + math.pi ) % (math.pi * 2)
+                 x += 0.2 * math.cos(a)
+                 y += 0.2 * math.sin(a)
             self._pub.publish(self.xya2ps(x, y, a))
         except Exception as e:
             print(e)
@@ -135,7 +138,6 @@ class set_goal():
                 #print(index)
                 self.id2index[id] = index
                 self.unique = self.ht2l.singleht2list((t, index, unique, x, y), self.unique)
-        self.ht2l.show_uid()
 
     def robreceive(self, xya):
         self.robxya = xya
@@ -178,7 +180,7 @@ class set_goal():
              return None
         try:
             x, y, vx, vy = self.ht2l.pos_and_vel_with_index(self.targetid, t)
-            print(self.targetid)
+            #print(vx, vy)
             x, y, math.atan2(vy, vx)
             a = math.atan2(vy, vx)
             a = (a + math.pi) % (2*math.pi)

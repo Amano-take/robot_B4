@@ -584,5 +584,6 @@ if __name__ == "__main__":
 	ht = htreceiver()
 	try:
 		ht.run()
+        
 	except rospy.ROSInterruptException:
 		pass 

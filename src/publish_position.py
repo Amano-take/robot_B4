@@ -68,9 +68,7 @@ class pubposition():
             dest = self.md.go_target(self.now)
             x, y, a = dest
             if a is None:
-                 a = ( self.poselist[targetid] + math.pi ) % (math.pi * 2)
-                 x += 0.2 * math.cos(a)
-                 y += 0.2 * math.sin(a)
+                 raise ValueError("未実装")
             self._pub.publish(self.xya2ps(x, y, a))
         except Exception as e:
             print(e)
@@ -115,7 +113,7 @@ class pubposition():
 
 class set_goal():
     meet_t = 0.5
-
+    distance = 0.1
 
     def __init__(self) -> None:
         self.ht2l = ht2list()
@@ -181,13 +179,20 @@ class set_goal():
         try:
             x, y, vx, vy = self.ht2l.pos_and_vel_with_index(self.targetid, t)
             #print(vx, vy)
-            x, y, math.atan2(vy, vx)
-            a = math.atan2(vy, vx)
-            a = (a + math.pi) % (2*math.pi)
             robx, roby, _ = self.robxya
-            goalx, goaly = Triangle_r_v.dest(x+vx*set_goal.meet_t - robx, y+vy*set_goal.meet_t-roby, vx, vy)
-            if vx ** 2 + vy ** 2 < 10 ** (-3):
-                 a = None
+            absvec = math.sqrt((robx - x) ** 2 + (roby - y) ** 2)
+
+            if absvec < set_goal.distance:
+                 #cmd_vel 自前発行
+                 return vx, vy, None
+            elif vx ** 2 + vy ** 2 < 10 ** (-3):
+                 goalx = x + (robx - x) * set_goal.distance / absvec
+                 goaly = y + (roby - y) * set_goal.distance / absvec
+                 a = math.atan2(y-roby, x- robx)
+            else:
+                 goalx, goaly = Triangle_r_v.dest(x+vx*set_goal.meet_t - robx, y+vy*set_goal.meet_t-roby, vx, vy)
+                 a = math.atan2(vy, vx)
+                 a = (a + math.pi) % (2*math.pi)
             return goalx+robx, goaly+roby, a
         except Exception as e:
             print(e)

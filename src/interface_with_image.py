@@ -27,7 +27,9 @@ class interface():
         rospy.Subscriber('/missing', String, self._in_callback_mis, queue_size=1)
 
         self.publisher = rospy.Publisher("/target_id_raw", String, queue_size=1)
-        self.publish()
+        self.stop = False
+        #self.publish()
+        
 
     def _in_callback_mis(self, msg:String):
         self.target = -1
@@ -35,11 +37,22 @@ class interface():
     def _in_callback_sp(self, msg:PointStamped):
         pass
 
+    def stop(self):
+        print("kokodesuyo")
+        self.stop = True
+
     def publish(self):
-        while True:
-            print(self.target)
-            self.publisher.publish(str(self.target))
-            time.sleep(1)
+        try:
+            while True:
+                if rospy.core.is_shutdown():
+                    print("koko")
+                    break
+                print(self.target)
+                self.publisher.publish(self.target)
+                time.sleep(1)
+        except KeyboardInterrupt:
+            print("kokoha?")
+            rospy.core.signal_shutdown('keyboard interrupt')
 
     def _in_callback_ht(self, msg:HTEntityList):
         humanpoints_in_cam = []
@@ -89,13 +102,13 @@ class interface():
         self.camera_model.fromCameraInfo(msg)
 
     def run(self):
-        rospy.spin()
+        self.publish()
     
 
 if __name__ == "__main__":
     rospy.init_node("interface")
-    interf = interface()
     try:
+        interf = interface()
         interf.run()
-    except:
-        print("error interface")
+    except KeyboardInterrupt:
+        interf.stop()

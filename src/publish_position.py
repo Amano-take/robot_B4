@@ -121,18 +121,21 @@ class set_goal():
         self.targetid_raw = -1
         self.id2index = ddict(int)
         self.now = 0
+        self.unique = 0
+        self.target_uid = -1
 
     def htreceive(self, htoutput):
         t, htlist = htoutput
         self.now = t
         for id, unique, x, y in htlist:
             if id in self.id2index.keys():
-                self.ht2l.singleht2list((t, self.id2index[id], unique, x, y))
+                self.unique = self.ht2l.singleht2list((t, self.id2index[id], unique, x, y), self.unique)
             else:
                 index = self.ht2l.unoccupied_num(t)
                 #print(index)
                 self.id2index[id] = index
-                self.ht2l.singleht2list((t, index, unique, x, y))
+                self.unique = self.ht2l.singleht2list((t, index, unique, x, y), self.unique)
+        self.ht2l.show_uid()
 
     def robreceive(self, xya):
         self.robxya = xya
@@ -141,14 +144,21 @@ class set_goal():
         if targetid == -1:
              self.targetid = -1
              self.targetid_raw = -1
+             self.target_uid = -1
         elif (targetid == self.targetid_raw and self.targetid != self.id2index[targetid] and self.targetid != -1):
              self.targetid = -1
              self.targetid_raw = -1
+             self.target_uid = -1
              raise ValueError("Missing")
-             return
-        else:
-            self.targetid_raw = targetid
-            self.targetid = self.id2index[targetid]
+        elif self.target_uid == -1:
+             self.target_uid = self.ht2l.htlist[self.id2index[targetid]].unique
+             self.targetid_raw = targetid
+             self.targetid = self.id2index[targetid]
+        elif self.target_uid != self.ht2l.htlist[self.id2index[targetid]].unique:
+             self.targetid = -1
+             self.targetid_raw = -1
+             self.target_uid = -1
+             raise ValueError("Missing... same id but not same uid")
 
 
     def calculate(self, id):

@@ -331,12 +331,27 @@ class ht2list():
                 self.htlist[id].clear(uniqueid)
                 self.htlist[id].add((t, x, y))
 
-    def singleht2list(self, htoutput):
+    def ht2list_unique(self, htoutput, unique):
+        """
+        htoutput = (t, htlist)
+        htlist = [(id, unique, x, y), (),,,]
+        unique を使い、その後使えるuniqueidをreturn
+        """
+        t, htlist = htoutput
+        uid = unique
+        for id, uniqueid, x, y in htlist:
+            uid = self.htlist[id].add_unique((t, x, y), uid)
+        return uid
+               
+        
+
+    def singleht2list(self, htoutput, unique):
         """
         listのidを採用
         """
         t, id, uniqueid, x, y = htoutput
-        self.htlist[id].add((t, x, y))
+        uid = self.htlist[id].add_unique((t, x, y), unique)
+        return uid
 
     def unoccupied_num(self, t):
         for i, htdeq in enumerate(self.htlist):
@@ -377,6 +392,12 @@ class ht2list():
         vx, vy = htd.calvel(t)
         _, x, y = htd.xy()
         return x, y, vx, vy
+    
+    def show_uid(self):
+        ans = []
+        for i in range(ht2list.max_list_len):
+            ans.append(self.htlist[i].unique)
+        print(ans)
 
 class ht2deq():
     length = 16
@@ -395,6 +416,7 @@ class ht2deq():
         return t, x, y
 
     def add(self, txy):
+        
         if not self.isSameHuman(txy):
             self.clear(0)
         
@@ -408,7 +430,30 @@ class ht2deq():
                 self.beftxy[i] += self.deq[ht2deq.length // 2 - 1][i]
                 self.aftxy[i] -= self.deq[ht2deq.length // 2 - 1][i]
                 self.aftxy[i] += txy[i]
-    
+
+    def add_unique(self, txy, unique):
+        """
+        uniqueid が変わる場合に使うunique
+        reuturn は その後使えるuniqueid
+        """
+        a = unique
+        if not self.isSameHuman(txy):
+            a += 1
+            self.clear(a)
+        
+        if len(self.deq) != ht2deq.length:
+            self.deq.append(txy)
+        else:
+            minus = self.deq.popleft()
+            self.deq.append(txy)
+            for i in range(3):
+                self.beftxy[i] -= minus[i]
+                self.beftxy[i] += self.deq[ht2deq.length // 2 - 1][i]
+                self.aftxy[i] -= self.deq[ht2deq.length // 2 - 1][i]
+                self.aftxy[i] += txy[i]
+
+        return a
+
     def is_occupied(self, now):
         """
         このリストが専有されているかどうかを返す。専有されているならTrue、されていないのならばFalse

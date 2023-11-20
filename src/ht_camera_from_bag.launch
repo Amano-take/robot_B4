@@ -28,6 +28,6 @@
 </node>
 
 <!-- SHOW IMAGE -->
-<node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/usb_cam/image_raw"/>
+<node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw"/>
 
 </launch>

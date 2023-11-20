@@ -3,17 +3,21 @@
 # 
 ############################################################
 
+import random
 import time
 import rospy
 import tf2_ros
 import tf2_geometry_msgs
 import tf
+import cv2
 
 from geometry_msgs.msg import PointStamped
 from layer2.msg import HTEntityList
 from sensor_msgs.msg import CameraInfo
 from image_geometry import PinholeCameraModel
 from std_msgs.msg import String
+from sensor_msgs.msg import CompressedImage, Image
+from cv_bridge import CvBridge
 
 class interface():
     
@@ -21,16 +25,40 @@ class interface():
         self.humanpoint = []
         self.tfBuffer = tf2_ros.Buffer()
         self.target = -1
-        rospy.Subscriber("/usb_cam/image_raw/screenpoint", PointStamped, self._in_callback_sp)
+        self.bridge = CvBridge()
+        
+        rospy.Subscriber("/my_image_raw/screenpoint", PointStamped, self._in_callback_sp)
         rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
         rospy.Subscriber('/usb_cam/camera_info', CameraInfo, self._camera_info_cb, queue_size=1)
         rospy.Subscriber('/missing', String, self._in_callback_mis, queue_size=1)
 
         self.publisher = rospy.Publisher("/target_id_raw", String, queue_size=1)
+        self.pubimage = rospy.Publisher("/my_image_raw", Image, queue_size=1)
+        rospy.Subscriber("/usb_cam/image_raw", Image, self._in_callback_image)
         self.stop = False
         #self.publish()
         
+    def _in_callback_image(self, msg:Image):
+        try:
+            cv_array = self.bridge.imgmsg_to_cv2(msg)
+            for i, hp in enumerate(sorted(self.humanpoint)):
+                a = (int(hp[0]) - 40, 370)
+                b = (int(hp[0])+ 40, 100)
+                if self.target == hp[2]:
+                    thick = 20
+                else:
+                    thick = 1
 
+                if hp[2] % 3 == 0:
+                    color = (255, 0, 0)
+                elif hp[2] % 3 == 1:
+                    color = (0, 255, 0)
+                else:
+                    color = (0, 0, 255)
+                cv_array = cv2.rectangle(cv_array, a, b, color, thick,  lineType=cv2.LINE_AA)
+            self.pubimage.publish(self.bridge.cv2_to_imgmsg(cv_array, encoding="rgb8"))
+        except Exception as err:
+            print(err)
     def _in_callback_mis(self, msg:String):
         self.target = -1
 

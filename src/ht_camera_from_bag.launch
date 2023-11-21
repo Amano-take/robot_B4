@@ -30,4 +30,6 @@
 <!-- SHOW IMAGE -->
 <node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw"/>
 
+<node pkg="amano_b4" type="publish_position.py" name="pub_point" />
+
 </launch>

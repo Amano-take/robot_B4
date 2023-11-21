@@ -76,7 +76,7 @@ class interface():
                     print("koko")
                     break
                 print(self.target)
-                self.publisher.publish(self.target)
+                self.publisher.publish(str(self.target))
                 time.sleep(1)
         except KeyboardInterrupt:
             print("kokoha?")

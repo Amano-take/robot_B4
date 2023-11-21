@@ -154,11 +154,11 @@ class set_goal():
              self.target_uid = self.ht2l.htlist[self.id2index[targetid]].unique
              self.targetid_raw = targetid
              self.targetid = self.id2index[targetid]
-        elif self.target_uid != self.ht2l.htlist[self.id2index[targetid]].unique:
+        """"elif self.target_uid != self.ht2l.htlist[self.id2index[targetid]].unique:
              self.targetid = -1
              self.targetid_raw = -1
              self.target_uid = -1
-             raise ValueError("Missing... same id but not same uid")
+             raise ValueError("Missing... same id but not same uid")""""
 
 
     def calculate(self, id):

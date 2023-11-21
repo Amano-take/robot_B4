@@ -145,15 +145,20 @@ class set_goal():
              self.targetid = -1
              self.targetid_raw = -1
              self.target_uid = -1
-        elif (targetid == self.targetid_raw and self.targetid != self.id2index[targetid] and self.targetid != -1):
+             """elif (targetid == self.targetid_raw and self.targetid != self.id2index[targetid] and self.targetid != -1):
              self.targetid = -1
              self.targetid_raw = -1
              self.target_uid = -1
-             raise ValueError("Missing")
+             raise ValueError("Missing")"""
         elif self.target_uid == -1:
              self.target_uid = self.ht2l.htlist[self.id2index[targetid]].unique
              self.targetid_raw = targetid
              self.targetid = self.id2index[targetid]
+        else:
+             self.target_uid = self.ht2l.htlist[self.id2index[targetid]].unique
+             self.targetid_raw = targetid
+             self.targetid = self.id2index[targetid]
+            
         """"elif self.target_uid != self.ht2l.htlist[self.id2index[targetid]].unique:
              self.targetid = -1
              self.targetid_raw = -1
@@ -182,12 +187,14 @@ class set_goal():
             robx, roby, _ = self.robxya
             absvec = math.sqrt((robx - x) ** 2 + (roby - y) ** 2)
 
-            if absvec < set_goal.distance:
+            """if absvec < set_goal.distance:
                  #cmd_vel 自前発行
                  return vx, vy, None
-            elif vx ** 2 + vy ** 2 < 10 ** (-3):
-                 goalx = x + (robx - x) * set_goal.distance / absvec
-                 goaly = y + (roby - y) * set_goal.distance / absvec
+            el
+            """
+            if vx ** 2 + vy ** 2 < 10 ** (-3):
+                 goalx = robx + (x - robx) * set_goal.distance / absvec
+                 goaly = roby + (y - roby) * set_goal.distance / absvec
                  a = math.atan2(y-roby, x- robx)
             else:
                  goalx, goaly = Triangle_r_v.dest(x+vx*set_goal.meet_t - robx, y+vy*set_goal.meet_t-roby, vx, vy)
@@ -197,6 +204,7 @@ class set_goal():
         except Exception as e:
             print(e)
             return None
+            #raise ValueError....
             
              
              

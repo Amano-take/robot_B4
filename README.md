@@ -1,7 +1,7 @@
 # robot_B4
 kanda-kenn
 
-#How To Start
+# How To Start
 roslaunch amano_b4 ht_camera_from_bag.launch
 
 Click the human on imageviewer's screen, the edge would become thicker and publish goal pose on the topic of **/goal_pose**.

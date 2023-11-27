@@ -26,7 +26,7 @@ class pubposition():
     def __init__(self) -> None:
         rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
         rospy.Subscriber("/target_id_raw", String, self._in_callback_target, queue_size=2)
-        self._pub = rospy.Publisher("/goal_pose", PoseStamped, queue_size=1)
+        self._pub = rospy.Publisher("/move_base/simple_goal", PoseStamped, queue_size=1)
         self._pub_debug = rospy.Publisher("/debug", PoseStamped, queue_size=1)
         self._pub_missing_notification = rospy.Publisher("/missing", String, queue_size=2)
         self.md = set_goal()

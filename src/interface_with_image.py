@@ -45,13 +45,13 @@ class interface():
                 a = (int(hp[0]) - 40, 370)
                 b = (int(hp[0])+ 40, 100)
                 if self.target == hp[2]:
-                    thick = 20
+                    thick = 10
                 else:
                     thick = 1
 
-                if hp[2] % 3 == 0:
+                if i % 3 == 0:
                     color = (255, 0, 0)
-                elif hp[2] % 3 == 1:
+                elif i % 3 == 1:
                     color = (0, 255, 0)
                 else:
                     color = (0, 0, 255)

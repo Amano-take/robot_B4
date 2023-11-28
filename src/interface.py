@@ -1,13 +1,18 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# 
+############################################################
+
 import tkinter as tk
 import tkinter.ttk as ttk
 import rospy
 from std_msgs.msg import String
 
 rospy.init_node("interface_target_id")
-publisher = rospy.Publisher("/tos_voice_gesture", String, queue_size=1)
+publisher = rospy.Publisher("/tos_voice_gestures", String, queue_size=1)
 
 root = tk.Tk()
-root.geometry("350x1000")
+root.geometry("350x100")
 root.title("しゃべる内容")
 frame = ttk.Frame(root)
 frame.pack(fill = tk.BOTH, padx = 20, pady=20)
@@ -20,8 +25,5 @@ def publish(a=None):
 txt.bind("<Return>", publish)
 bot = tk.Button(frame, text="send", command=publish)
 bot.pack()
-
-
-
 
 root.mainloop()

@@ -10,6 +10,7 @@ import tf2_ros
 import tf2_geometry_msgs
 import tf
 import cv2
+import numpy as np
 
 from geometry_msgs.msg import PointStamped
 from layer2.msg import HTEntityList
@@ -18,6 +19,7 @@ from image_geometry import PinholeCameraModel
 from std_msgs.msg import String
 from sensor_msgs.msg import CompressedImage, Image
 from cv_bridge import CvBridge
+
 
 class interface():
     
@@ -41,24 +43,40 @@ class interface():
     def _in_callback_image(self, msg:Image):
         try:
             cv_array = self.bridge.imgmsg_to_cv2(msg)
+            s = 100
+            r = 100
             for i, hp in enumerate(sorted(self.humanpoint)):
-                a = (int(hp[0]) - 40, 370)
-                b = (int(hp[0])+ 40, 100)
-                if self.target == hp[2]:
-                    thick = 10
+                if hp[0] >= 640:
+                    p1 = [630, s]
+                    p2 = [640, s + 5]
+                    p3 = [630, s + 10]
+                    s += 20
+                    cv_array = cv2.fillConvexPoly(cv_array, np.array([p1, p2, p3]), (255, 0, 0), lineType=cv2.LINE_AA)
+                elif hp[0] <= 0:
+                    p1 = [10, r]
+                    p2 = [0, r + 5]
+                    p3 = [10, r + 10]
+                    r += 20
+                    cv_array = cv2.fillConvexPoly(cv_array, np.array([p1, p2, p3]), (255, 0, 0), lineType=cv2.LINE_AA)
                 else:
-                    thick = 1
+                    a = (int(hp[0]) - 40, 370)
+                    b = (int(hp[0])+ 40, 100)
+                    if self.target == hp[2]:
+                        thick = 10
+                    else:
+                        thick = 1
 
-                if i % 3 == 0:
-                    color = (255, 0, 0)
-                elif i % 3 == 1:
-                    color = (0, 255, 0)
-                else:
-                    color = (0, 0, 255)
-                cv_array = cv2.rectangle(cv_array, a, b, color, thick,  lineType=cv2.LINE_AA)
+                    if hp[2] % 3 == 0:
+                        color = (255, 0, 0)
+                    elif hp[2] % 3 == 1:
+                        color = (0, 255, 0)
+                    else:
+                        color = (0, 0, 255)
+                    cv_array = cv2.rectangle(cv_array, a, b, color, thick,  lineType=cv2.LINE_AA)
             self.pubimage.publish(self.bridge.cv2_to_imgmsg(cv_array, encoding="rgb8"))
         except Exception as err:
             print(err)
+
     def _in_callback_mis(self, msg:String):
         self.target = -1
 
@@ -73,9 +91,7 @@ class interface():
         try:
             while True:
                 if rospy.core.is_shutdown():
-                    print("koko")
                     break
-                print(self.target)
                 self.publisher.publish(str(self.target))
                 time.sleep(1)
         except KeyboardInterrupt:
@@ -91,7 +107,7 @@ class interface():
         
     def _in_callback_sp(self, msg:PointStamped):
         x, y = msg.point.x, msg.point.y
-        if y == 0 or y == 360:
+        if y == 0 or y == 360 or x == 0 or x == 640:
             self.target = -1
             return
         

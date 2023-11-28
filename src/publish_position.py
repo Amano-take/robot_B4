@@ -26,7 +26,8 @@ class pubposition():
     def __init__(self) -> None:
         rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
         rospy.Subscriber("/target_id_raw", String, self._in_callback_target, queue_size=2)
-        self._pub = rospy.Publisher("/move_base/simple_goal", PoseStamped, queue_size=1)
+        self._pub = rospy.Publisher("/goal_pose", PoseStamped, queue_size=1)
+        self._pub_cmd = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
         self._pub_debug = rospy.Publisher("/debug", PoseStamped, queue_size=1)
         self._pub_missing_notification = rospy.Publisher("/missing", String, queue_size=2)
         self.md = set_goal()
@@ -68,7 +69,10 @@ class pubposition():
             dest = self.md.go_target(self.now)
             x, y, a = dest
             if a is None:
-                 raise ValueError("未実装")
+                twi = Twist()
+                twi.linear.x = x
+                twi.linear.y = y
+                self._pub_cmd(twi)
             self._pub.publish(self.xya2ps(x, y, a))
         except Exception as e:
             print(e)
@@ -187,15 +191,14 @@ class set_goal():
             robx, roby, _ = self.robxya
             absvec = math.sqrt((robx - x) ** 2 + (roby - y) ** 2)
 
-            """if absvec < set_goal.distance:
-                 #cmd_vel 自前発行
-                 return vx, vy, None
-            el
-            """
+            
             if vx ** 2 + vy ** 2 < 10 ** (-3):
                  goalx = robx + (x - robx) * set_goal.distance / absvec
                  goaly = roby + (y - roby) * set_goal.distance / absvec
                  a = math.atan2(y-roby, x- robx)
+            elif absvec < set_goal.distance:
+                 #cmd_vel 自前発行
+                 return vx, vy, None
             else:
                  goalx, goaly = Triangle_r_v.dest(x+vx*set_goal.meet_t - robx, y+vy*set_goal.meet_t-roby, vx, vy)
                  a = math.atan2(vy, vx)

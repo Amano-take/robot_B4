@@ -27,9 +27,14 @@
 <node pkg="amano_b4" type="interface_with_image.py" name="pub_target">
 </node>
 
+
 <!-- SHOW IMAGE -->
 <node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw"/>
 
+<!-- PUBLISH GOAL POSE -->
 <node pkg="amano_b4" type="publish_position.py" name="pub_point" />
+
+<!-- OPERATE WITH KEYBOARD -->
+<node pkg="amano_b4" type="keyboard_move.py" name="keyboardMove" />
 
 </launch>

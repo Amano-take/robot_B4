@@ -8,6 +8,7 @@ import time
 import rospy
 import tf2_ros
 import tf2_geometry_msgs
+import json
 import tf
 import cv2
 import numpy as np
@@ -22,7 +23,7 @@ from cv_bridge import CvBridge
 
 
 class interface():
-    
+    publish_frequency = 1
     def __init__(self) -> None:
         self.humanpoint = []
         self.tfBuffer = tf2_ros.Buffer()
@@ -30,7 +31,7 @@ class interface():
         self.bridge = CvBridge()
         
         rospy.Subscriber("/my_image_raw/screenpoint", PointStamped, self._in_callback_sp)
-        rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
+        rospy.Subscriber("/can_meet_dict", String, self._in_callback_ht, queue_size=1)
         rospy.Subscriber('/usb_cam/camera_info', CameraInfo, self._camera_info_cb, queue_size=1)
         rospy.Subscriber('/missing', String, self._in_callback_mis, queue_size=1)
 
@@ -38,6 +39,7 @@ class interface():
         self.pubimage = rospy.Publisher("/my_image_raw", Image, queue_size=1)
         rospy.Subscriber("/usb_cam/image_raw", Image, self._in_callback_image)
         self.stop = False
+        self.get_screenpoint_time = time.time() - 1
         #self.publish()
         
     def _in_callback_image(self, msg:Image):
@@ -45,19 +47,24 @@ class interface():
             cv_array = self.bridge.imgmsg_to_cv2(msg)
             s = 100
             r = 100
-            for i, hp in enumerate(sorted(self.humanpoint)):
+            for hp in self.humanpoint:
+                if hp[3]:
+                        color = (0, 255, 0)
+                else :
+                    color = (255, 0, 0)
+
                 if hp[0] >= 640:
                     p1 = [630, s]
                     p2 = [640, s + 5]
                     p3 = [630, s + 10]
                     s += 20
-                    cv_array = cv2.fillConvexPoly(cv_array, np.array([p1, p2, p3]), (255, 0, 0), lineType=cv2.LINE_AA)
+                    cv_array = cv2.fillConvexPoly(cv_array, np.array([p1, p2, p3]), color, lineType=cv2.LINE_AA)
                 elif hp[0] <= 0:
                     p1 = [10, r]
                     p2 = [0, r + 5]
                     p3 = [10, r + 10]
                     r += 20
-                    cv_array = cv2.fillConvexPoly(cv_array, np.array([p1, p2, p3]), (255, 0, 0), lineType=cv2.LINE_AA)
+                    cv_array = cv2.fillConvexPoly(cv_array, np.array([p1, p2, p3]), color, lineType=cv2.LINE_AA)
                 else:
                     a = (int(hp[0]) - 40, 370)
                     b = (int(hp[0])+ 40, 100)
@@ -66,12 +73,7 @@ class interface():
                     else:
                         thick = 1
 
-                    if hp[2] % 3 == 0:
-                        color = (255, 0, 0)
-                    elif hp[2] % 3 == 1:
-                        color = (0, 255, 0)
-                    else:
-                        color = (0, 0, 255)
+                    
                     cv_array = cv2.rectangle(cv_array, a, b, color, thick,  lineType=cv2.LINE_AA)
             self.pubimage.publish(self.bridge.cv2_to_imgmsg(cv_array, encoding="rgb8"))
         except Exception as err:
@@ -93,25 +95,36 @@ class interface():
                 if rospy.core.is_shutdown():
                     break
                 self.publisher.publish(str(self.target))
-                time.sleep(1)
+                time.sleep(1 / interface.publish_frequency)
         except KeyboardInterrupt:
             print("kokoha?")
             rospy.core.signal_shutdown('keyboard interrupt')
 
-    def _in_callback_ht(self, msg:HTEntityList):
+    def _in_callback_ht(self, msg:String):
         humanpoints_in_cam = []
-        rawlist = msg.list
+        rawlist = json.loads(msg.data)
+        #rospy.loginfo(rawlist)
         for raw in rawlist:
-            humanpoints_in_cam.append(self.map2cam(raw.x, raw.y, raw.id))
+            humanpoints_in_cam.append(self.map2cam(raw))
         self.humanpoint = humanpoints_in_cam
         
     def _in_callback_sp(self, msg:PointStamped):
+        t = time.time()
+        if t - self.get_screenpoint_time < 0.5:
+            self.target = -1
+            return 
+        
+        self.get_screenpoint_time = t
         x, y = msg.point.x, msg.point.y
         if y == 0 or y == 360 or x == 0 or x == 640:
             self.target = -1
             return
         
         min = float("inf")
+        if len(self.humanpoint) == 0 :
+            self.target = -1
+            return
+        
         for hp in self.humanpoint:
             if abs(x - hp[0]) < min:
                 min = abs(x - hp[0])
@@ -119,7 +132,11 @@ class interface():
         self.target = id
     
 
-    def map2cam(self, x, y, id):
+    def map2cam(self, li):
+        """
+        x, y, id, flag
+        """
+        x, y, id, flag = li
         listener = tf.TransformListener()
         ps = PointStamped()
         ps.header.frame_id = "map"
@@ -136,7 +153,7 @@ class interface():
                 transformed_point.point.y,
                 transformed_point.point.z)
             )                
-            return u, v, id
+            return u, v, id, flag
         except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
             print(e)
 

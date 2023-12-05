@@ -4,7 +4,7 @@
 <!--arg name="camera_pose" default="-0.115 -0.05 1.18 0 0 0"/-->
 <arg name="camera_pose" default="-0.115 -0.05 1.18 -1.57 0.0 -1.57"/>
 
-<!-- PLAY SOUND from robot -->
+<!-- PLAY SOUND from robot 
 <node name="audio_play_robot" pkg="audio_play" type="audio_play" output="screen">
 	<remap from="audio" to="audio_robot"/>
 	<param name="device" value=""/>
@@ -13,8 +13,9 @@
 	<param name="sample_format" value="S16LE"/>
 	<param name="format" value="wave"/>
 </node>
+-->
 
-<!-- MIC from operator -->
+<!-- MIC from operator 
 <node name="audio_capture_operator" pkg="audio_capture" type="audio_capture" output="log">
 	<remap from="audio" to="audio_operator"/>
 	<param name="device" value=""/>
@@ -23,6 +24,7 @@
 	<param name="sample_format" value="S16LE"/>
 	<param name="format" value="wave"/>
 </node>
+-->
 
 <!-- CAMERA TF -->
 <node pkg="tf2_ros" type="static_transform_publisher" name="camera_tf" args="$(arg camera_pose) base_link head_camera" />
@@ -44,15 +46,15 @@
 </node>
 
 <!-- PUBLISH TARGET -->
-<node pkg="amano_b4" type="interface_with_image.py" name="pub_target">
+<node pkg="amano_b4" type="interface_with_image.py" name="pub_target" output="screen">
 </node>
 
 
 <!-- SHOW IMAGE -->
-<node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw"/>
+<node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw" />
 
 <!-- PUBLISH GOAL POSE -->
-<node pkg="amano_b4" type="publish_position.py" name="pub_point" />
+<node pkg="amano_b4" type="publish_position.py" name="pub_point"   />
 
 <!-- OPERATE WITH KEYBOARD -->
 <node pkg="amano_b4" type="keyboard_move.py" name="keyboardMove" />

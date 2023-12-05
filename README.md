@@ -1,5 +1,6 @@
 # robot_B4
-kanda-kenn
+kanda-kenn 
+sotsuron
 
 # How To Start
 roslaunch amano_b4 ht_camera_from_bag.launch

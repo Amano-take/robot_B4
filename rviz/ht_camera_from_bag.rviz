@@ -63,6 +63,7 @@ Visualization Manager:
       Value: true
       Visibility:
         Grid: true
+        PointStamped: true
         Pose: true
         PoseArray: true
         TF: true
@@ -96,14 +97,14 @@ Visualization Manager:
           Value: true
         head_camera:
           Value: true
-        laser1:
-          Value: false
-        laser2:
-          Value: false
-        laser3:
-          Value: false
-        laser4:
-          Value: false
+        laser_frame1:
+          Value: true
+        laser_frame2:
+          Value: true
+        laser_frame3:
+          Value: true
+        laser_frame4:
+          Value: true
         map:
           Value: true
         odom:
@@ -122,13 +123,13 @@ Visualization Manager:
             base_link:
               head_camera:
                 {}
-              laser1:
+              laser_frame1:
                 {}
-              laser2:
+              laser_frame2:
                 {}
-              laser3:
+              laser_frame3:
                 {}
-              laser4:
+              laser_frame4:
                 {}
               velodyne:
                 {}
@@ -148,6 +149,17 @@ Visualization Manager:
       Shaft Radius: 0.05000000074505806
       Shape: Arrow
       Topic: /goal_pose
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 204; 41; 204
+      Enabled: true
+      History Length: 1
+      Name: PointStamped
+      Queue Size: 10
+      Radius: 0.20000000298023224
+      Topic: /debug
       Unreliable: false
       Value: true
   Enabled: true
@@ -178,7 +190,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10
+      Distance: 19.73822784423828
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -216,5 +228,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1440
-  X: 719
-  Y: 128
+  X: 480
+  Y: 91

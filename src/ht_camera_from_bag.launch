@@ -54,7 +54,7 @@
 <node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw" />
 
 <!-- PUBLISH GOAL POSE -->
-<node pkg="amano_b4" type="publish_position.py" name="pub_point"   />
+<node pkg="amano_b4" type="publish_position.py" name="pub_point"   output="screen"/>
 
 <!-- OPERATE WITH KEYBOARD -->
 <node pkg="amano_b4" type="keyboard_move.py" name="keyboardMove" />

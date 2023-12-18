@@ -305,7 +305,7 @@ class movement_decider():
                 return cx ** 2 + cy ** 2
     
 class ht2list():
-    max_list_len = 16
+    max_list_len = 50
     human_size = 0.1
     meet_t = 0.5
     #min_t * meet_t_index = meet_t
@@ -444,13 +444,8 @@ class ht2deq():
         if len(self.deq) != ht2deq.length:
             self.deq.append(txy)
         else:
-            minus = self.deq.popleft()
+            self.deq.popleft()
             self.deq.append(txy)
-            for i in range(3):
-                self.beftxy[i] -= minus[i]
-                self.beftxy[i] += self.deq[ht2deq.length // 2 - 1][i]
-                self.aftxy[i] -= self.deq[ht2deq.length // 2 - 1][i]
-                self.aftxy[i] += txy[i]
 
         return a
 

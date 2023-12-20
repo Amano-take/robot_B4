@@ -227,7 +227,7 @@ class set_goal():
 
 
 class Triangle_r_v():
-	Robot_speed = 0.5
+	Robot_speed = 0.6
 	Near_zero = 0.01
 
 	def __init__(self):

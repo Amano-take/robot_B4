@@ -64,6 +64,8 @@ class pubposition():
             self._pub_missing_notification.publish(str("Missing"))
             self._pub.publish(self.robotpostion())
             return
+        if targetid == -1:
+            return
         robpose = self.robotpostion()
         robxy = (robpose.pose.position.x, robpose.pose.position.y)
         try:   
@@ -242,8 +244,8 @@ class set_goal():
 
 
 class Triangle_r_v():
-	Robot_speed = 0.6
-	Near_zero = 0.01
+    Robot_speed = 0.6
+    Near_zero = 0.01
 
     def __init__(self):
         return 

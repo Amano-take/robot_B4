@@ -1,18 +1,18 @@
 # Fdb version 3
-["bibtex out/Paper"] 1704714453 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1704714512
-  "citation.bib" 1704703816 5371 17d9f31d10bd19961a48fef541f7e330 ""
-  "junsrt.bst" 0 -1 0 ""
-  "out/Paper.aux" 1704714510 5557 0dab29191e0099b112413c7057e6cb9e "latex"
+["bibtex out/Paper"] 1705060992 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1705060997
+  "citation.bib" 1705051399 12758 035b9295db13111e1e6aa39b8328caf7 ""
+  "jplain.bst" 0 -1 0 ""
+  "out/Paper.aux" 1705060995 7332 4d876de98db4685a9b7dd3288f71f287 "latex"
   (generated)
   "out/Paper.bbl"
   "out/Paper.blg"
-["dvipdf"] 1704714511 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1704714512
-  "out/Paper.dvi" 1704714510 35536 eb7e8dd88c4e797713314264d892c08a "latex"
+["dvipdf"] 1705060996 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1705060997
+  "out/Paper.dvi" 1705060995 69812 20cc2f2764c9127be1e21b91d39f20d4 "latex"
   (generated)
   "out/Paper.pdf"
-["latex"] 1704714508 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1704714512
-  "Paper.tex" 1704714508 19380 12da54d6a7007456d0e794503550f956 ""
-  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1704714508 19380 12da54d6a7007456d0e794503550f956 ""
+["latex"] 1705060992 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1705060997
+  "Paper.tex" 1705060992 36702 e1b12d24600077c494b315d1c4035e41 ""
+  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1705060992 36702 e1b12d24600077c494b315d1c4035e41 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1652175810 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1652178705 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth6.tfm" 1652178705 1196 977af188465e721f1f65facb66282510 ""
@@ -122,9 +122,10 @@
   "c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt" 1652180714 2829482 58fe9f7b9ebd69ef262623bd8c7b7b8d ""
   "c:/texlive/2022/texmf.cnf" 1652180617 713 e69b156964470283e0530f5060668171 ""
   "img/CDT.png" 1704707487 57477 75ee8e2b8bc93c69c15ae904e4a9b4a2 ""
-  "out/Paper.aux" 1704714510 5557 0dab29191e0099b112413c7057e6cb9e "latex"
-  "out/Paper.bbl" 1704714453 1021 f3568cd4f4df0c27b301eba5e166307a "bibtex out/Paper"
-  "out/Paper.toc" 1704714510 2078 00de3bf9c86aa6807509c9f7d611cd12 "latex"
+  "img/system_compose.drawio.png" 1704784962 60110 c0c9ab7990819096958ed38dd7e85143 ""
+  "out/Paper.aux" 1705060995 7332 4d876de98db4685a9b7dd3288f71f287 "latex"
+  "out/Paper.bbl" 1705060992 4765 7b4c4ee182030bf143b6ac1dfdbc9d01 "bibtex out/Paper"
+  "out/Paper.toc" 1705060995 2432 f7c154c0337b78e47c3e8762ab4f551b "latex"
   (generated)
   "out/Paper.aux"
   "out/Paper.dvi"

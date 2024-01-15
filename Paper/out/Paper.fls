@@ -564,6 +564,10 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm
+INPUT ./img/waystostop.drawio.png
+INPUT ./img/waystostop.drawio.png
+INPUT img/waystostop.drawio.png
+INPUT extractbb -B cropbox -O img/waystostop.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT img/system_compose.drawio.png

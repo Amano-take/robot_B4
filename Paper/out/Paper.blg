@@ -3,45 +3,45 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Paper.aux
 The style file: jplain.bst
 Database file #1: citation.bib
-You've used 16 entries,
+You've used 17 entries,
             2620 wiz_defined-function locations,
-            701 strings with 8449 characters,
-and the built_in function-call counts, 8246 in all, are:
-= -- 732
-> -- 347
-< -- 23
-+ -- 144
-- -- 126
-* -- 500
-:= -- 1129
-add.period$ -- 55
-call.type$ -- 16
-change.case$ -- 110
+            706 strings with 8662 characters,
+and the built_in function-call counts, 8753 in all, are:
+= -- 780
+> -- 359
+< -- 24
++ -- 149
+- -- 130
+* -- 524
+:= -- 1191
+add.period$ -- 58
+call.type$ -- 17
+change.case$ -- 115
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 415
-empty$ -- 637
-format.name$ -- 189
-if$ -- 1898
+cite$ -- 17
+duplicate$ -- 445
+empty$ -- 685
+format.name$ -- 195
+if$ -- 2021
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 17
-newline$ -- 84
-num.names$ -- 32
-pop$ -- 171
+int.to.str$ -- 17
+missing$ -- 18
+newline$ -- 89
+num.names$ -- 34
+pop$ -- 182
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 99
 quote$ -- 0
-skip$ -- 382
+skip$ -- 411
 stack$ -- 0
-substring$ -- 417
-swap$ -- 134
-text.length$ -- 23
+substring$ -- 454
+swap$ -- 145
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 62
+type$ -- 66
 warning$ -- 0
-while$ -- 64
-width$ -- 18
-write$ -- 185
-is.kanji.str$ -- 208
+while$ -- 69
+width$ -- 19
+write$ -- 196
+is.kanji.str$ -- 219

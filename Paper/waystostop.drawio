@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T19:29:22.435Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="nm6pvMIAhVdTttf0VNEV" version="22.1.18" type="device">
+  <diagram name="ページ1" id="Zp-V8851B6230g78PxDg">
+    <mxGraphModel dx="1099" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-1" value="1. 歩きスマホは危険ですので、おやめください" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="160" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-2" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.667;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="xdt5J9YczZUY0hBb_yy5-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="180" as="sourcePoint" />
+            <mxPoint x="190" y="440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-4" value="2. ご協力ありがとうございます。" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="440" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-6" value="3.&amp;nbsp;他人をケガさせた場合、高額の賠償金を請求される可能性があります。&lt;br&gt;4.&amp;nbsp;歩きスマホが原因の死亡事故も発生しています。&lt;br&gt;5. 道案内なら私がしますよ。&lt;br&gt;6.そこの柱の裏から急に人が飛び出してくるかもしれません&lt;br&gt;7.そこの{外見的特徴}の方に行っています。" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="260" width="410" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-7" value="歩きスマホをやめた場合" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="110" y="140" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-9" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;entryX=0.325;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440.5" y="190" as="sourcePoint" />
+            <mxPoint x="440" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-10" value="歩きスマホをやめなかった場合" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="440" y="200" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-11" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.198;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="xdt5J9YczZUY0hBb_yy5-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="413.96000000000004" y="350" as="sourcePoint" />
+            <mxPoint x="341" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-12" value="歩きスマホをやめた場合" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="345" y="350" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-18" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="534.5" y="350" as="sourcePoint" />
+            <mxPoint x="534.5" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xdt5J9YczZUY0hBb_yy5-19" value="諦める" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="510" y="440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mBQaQQ8Qs9N1hX85ZaB0-1" value="歩きスマホをやめなかった場合" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="350" width="190" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

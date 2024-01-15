@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.5.10)  13 JAN 2024 01:22
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.5.10)  16 JAN 2024 04:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -456,21 +456,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 92.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 93.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 100.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 93.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 100.
 [2
 
 ]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 191.
+(Font)              No change on input line 189.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -480,7 +477,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 194.
+(Font)              No change on input line 231.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -489,12 +486,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [4]
-第 2 章
-[5
-
-]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 245.
+(Font)              No change on input line 238.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -502,28 +495,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
-[6]
+[5]
+第 2 章
+[6
+
+]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
+(Font)              No change on input line 297.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
+
+[7]
 第 3 章
 File: img/CDT.png Graphic file (type bmp)
 <img/CDT.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7
+[8
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 340.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
-
-[8]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 377.
+(Font)              No change on input line 374.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -532,10 +526,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [9]
-File: img/system_compose.drawio.png Graphic file (type bmp)
-<img/system_compose.drawio.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/waystostop.drawio.png Graphic file (type bmp)
+<img/waystostop.drawio.png>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 393.
+(Font)              No change on input line 439.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -544,8 +541,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [10]
+File: img/system_compose.drawio.png Graphic file (type bmp)
+<img/system_compose.drawio.png>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 412.
+(Font)              No change on input line 459.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -555,7 +554,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 442.
+(Font)              No change on input line 471.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -565,7 +564,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 442.
+(Font)              No change on input line 512.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -574,20 +573,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [13]
-第 4 章
-[14
-
-]
-第 5 章
-[15
-
-] (out/Paper.bbl [16
-
-] [17
-
-])
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 471.
+(Font)              No change on input line 521.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -595,14 +582,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
-[18] (out/Paper.aux) ) 
+[14]
+第 4 章
+[15
+
+]
+第 5 章
+[16
+
+] (out/Paper.bbl [17
+
+] [18
+
+])
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
+(Font)              No change on input line 549.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
+
+[19] (out/Paper.aux) ) 
 Here is how much of TeX's memory you used:
- 5765 strings out of 478759
- 87609 string characters out of 5860386
- 426465 words of memory out of 5000000
- 24030 multiletter control sequences out of 15000+600000
+ 5776 strings out of 478759
+ 87853 string characters out of 5860386
+ 425485 words of memory out of 5000000
+ 24040 multiletter control sequences out of 15000+600000
  491839 words of font info for 116 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  55i,12n,62p,318b,341s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Paper.dvi (20 pages, 70376 bytes).
+Output written on out/Paper.dvi (21 pages, 80388 bytes).

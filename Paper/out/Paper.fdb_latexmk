@@ -1,18 +1,18 @@
 # Fdb version 3
-["bibtex out/Paper"] 1705075876 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1705076571
-  "citation.bib" 1705051399 12758 035b9295db13111e1e6aa39b8328caf7 ""
+["bibtex out/Paper"] 1705346595 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1705347034
+  "citation.bib" 1705344363 13066 9d3591a056650bf8c30f084f35563855 ""
   "jplain.bst" 0 -1 0 ""
-  "out/Paper.aux" 1705076569 7326 3277acdd96daccb3f82451c055043db1 "latex"
+  "out/Paper.aux" 1705347032 7772 99c7ce7dc1e5f1dccaa520fa94fccbca "latex"
   (generated)
   "out/Paper.bbl"
   "out/Paper.blg"
-["dvipdf"] 1705076570 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1705076571
-  "out/Paper.dvi" 1705076569 70376 f1765ce5070b1e803c482c346e58b23d "latex"
+["dvipdf"] 1705347033 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1705347034
+  "out/Paper.dvi" 1705347032 80388 a165e1e12eae2ddfed8802ed541d5709 "latex"
   (generated)
   "out/Paper.pdf"
-["latex"] 1705076567 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1705076571
-  "Paper.tex" 1705076566 37072 6b4278bd6d37613afb69546133fe99ff ""
-  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1705076566 37072 6b4278bd6d37613afb69546133fe99ff ""
+["latex"] 1705347029 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1705347034
+  "Paper.tex" 1705347033 43977 ae92c9a51ac63a2f1a55464977ab3713 ""
+  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1705347033 43977 ae92c9a51ac63a2f1a55464977ab3713 ""
   "c:/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1652175810 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1652178705 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth6.tfm" 1652178705 1196 977af188465e721f1f65facb66282510 ""
@@ -122,10 +122,11 @@
   "c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt" 1652180714 2829482 58fe9f7b9ebd69ef262623bd8c7b7b8d ""
   "c:/texlive/2022/texmf.cnf" 1652180617 713 e69b156964470283e0530f5060668171 ""
   "img/CDT.png" 1704707487 57477 75ee8e2b8bc93c69c15ae904e4a9b4a2 ""
-  "img/system_compose.drawio.png" 1704784962 60110 c0c9ab7990819096958ed38dd7e85143 ""
-  "out/Paper.aux" 1705076569 7326 3277acdd96daccb3f82451c055043db1 "latex"
-  "out/Paper.bbl" 1705075877 4765 7b4c4ee182030bf143b6ac1dfdbc9d01 "bibtex out/Paper"
-  "out/Paper.toc" 1705076569 2432 f7c154c0337b78e47c3e8762ab4f551b "latex"
+  "img/system_compose.drawio.png" 1705346896 55454 d3595e0ba70a0f3f7a69b4beaefa108f ""
+  "img/waystostop.drawio.png" 1705346970 40668 9ff6cf7802918d59a9a1b3a8721229a1 ""
+  "out/Paper.aux" 1705347032 7772 99c7ce7dc1e5f1dccaa520fa94fccbca "latex"
+  "out/Paper.bbl" 1705346595 5039 62f7a4e2313a56a8423080f5303b386f "bibtex out/Paper"
+  "out/Paper.toc" 1705347032 2388 47a52d0b4fb29ad24bffc7e076ef9331 "latex"
   (generated)
   "out/Paper.aux"
   "out/Paper.dvi"

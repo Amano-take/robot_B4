@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.5.10)  16 JAN 2024 21:53
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.5.10)  17 JAN 2024 03:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -477,7 +477,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 231.
+(Font)              No change on input line 232.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -487,7 +487,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 238.
+(Font)              No change on input line 239.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -501,7 +501,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 297.
+(Font)              No change on input line 299.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -517,7 +517,7 @@ File: img/CDT.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 374.
+(Font)              No change on input line 411.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -526,8 +526,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [9]
+File: img/waystostop.drawio.png Graphic file (type bmp)
+<img/waystostop.drawio.png>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 428.
+(Font)              No change on input line 444.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -536,12 +538,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [10]
-File: img/waystostop.drawio.png Graphic file (type bmp)
-<img/waystostop.drawio.png>
 File: img/system_compose.drawio.png Graphic file (type bmp)
 <img/system_compose.drawio.png>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 459.
+(Font)              No change on input line 460.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -551,7 +551,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 471.
+(Font)              No change on input line 472.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -560,8 +560,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.49998pt}.
 
 [12]
+File: img/interface.png Graphic file (type bmp)
+<img/interface.png>
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 512.
+(Font)              No change on input line 517.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -571,7 +573,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 521.
+(Font)              No change on input line 526.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -593,7 +595,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ])
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/sl' undefined
-(Font)              No change on input line 549.
+(Font)              No change on input line 555.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 15.49998pt, for example:
@@ -603,12 +605,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [19] (out/Paper.aux) ) 
 Here is how much of TeX's memory you used:
- 5776 strings out of 478759
- 87853 string characters out of 5860386
- 426485 words of memory out of 5000000
- 24040 multiletter control sequences out of 15000+600000
+ 5783 strings out of 478759
+ 87992 string characters out of 5860386
+ 426508 words of memory out of 5000000
+ 24046 multiletter control sequences out of 15000+600000
  491839 words of font info for 116 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 55i,12n,62p,318b,341s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,12n,62p,318b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Paper.dvi (21 pages, 80448 bytes).
+Output written on out/Paper.dvi (21 pages, 81064 bytes).

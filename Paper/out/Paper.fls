@@ -572,6 +572,10 @@ INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT img/system_compose.drawio.png
 INPUT extractbb -B cropbox -O img/system_compose.drawio.png
+INPUT ./img/interface.png
+INPUT ./img/interface.png
+INPUT img/interface.png
+INPUT extractbb -B cropbox -O img/interface.png
 INPUT out/Paper.bbl
 INPUT out/Paper.bbl
 INPUT out/Paper.bbl

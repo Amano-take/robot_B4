@@ -63,7 +63,7 @@ class interface():
                 if x2 - x1 < 20:
                     a = 20 - (x2 - x1)
                     x2 += a / 2
-                    x1 += a / 2
+                    x1 -= a / 2
                 y1, y2 = min(y1, y2), max(y1, y2)
                 if flag:
                         color = (0, 255, 0)

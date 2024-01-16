@@ -28,7 +28,7 @@ class pubposition():
     def __init__(self) -> None:
         rospy.Subscriber("/human_tracked_l2", HTEntityList, self._in_callback_ht, queue_size=1)
         rospy.Subscriber("/target_id_raw", String, self._in_callback_target, queue_size=2)
-        self._pub = rospy.Publisher("/goal_pose", PoseStamped, queue_size=1)
+        self._pub = rospy.Publisher("//move_base_simple/goal", PoseStamped, queue_size=1)
         self._pub_debug = rospy.Publisher("/debug", PointStamped, queue_size=1)
         self._pub_debug2 = rospy.Publisher("/debug2", PointStamped, queue_size=1)
         self._pub_missing_notification = rospy.Publisher("/missing", String, queue_size=2)
@@ -141,8 +141,8 @@ class set_goal():
                 #print(index)
                 self.id2index[id] = index
                 self.unique = self.ht2l.singleht2list((t, index, unique, x, y), self.unique)
-
-            ans.append([x, y, id, self.calculate(id, robxy)])
+            temp = self.calculate(id, robxy)
+            ans.append([x, y, id, temp[0], temp[1]])
         return ans
             
 
@@ -182,10 +182,10 @@ class set_goal():
                 return True
             robx, roby = robxy
             goalx, goaly = Triangle_r_v.dest(x+vx*set_goal.meet_t - robx, y+vy*set_goal.meet_t- roby, vx, vy)
-            return True
+            return True, math.sqrt(vx**2 + vy**2)
         
         except Exception as e:
-            return False
+            return False, math.sqrt(vx**2 + vy**2)
         
     def xy2position(self, x, y):
         ans = PointStamped()

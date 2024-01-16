@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<launch>
+<!-- ARGUMENTS -->
+
+<!--arg name="audio_device_operator_mic" default="pulse:alsa_input.usb-BurrBrown_from_Texas_Instruments_USB_AUDIO_CODEC-00.analog-stereo" -->
+<arg name="audio_device_operator_mic" default="" />
+
+<!--arg name="device_audio_operator_speaker" default="pulse:alsa_output.usb-BurrBrown_from_Texas_Instruments_USB_AUDIO_CODEC-00.analog-stereo"/-->
+
+<arg name="device_audio_operator_speaker" default="" />
+
+
+<arg name="remote_joy/joystick_dev" default="/dev/input/js0"/>
+
+<arg name="remote_joy/max_linear_vel" default="0.8" />
+<arg name="remote_joy/max_side_vel" default="0.001" />
+<arg name="remote_joy/max_angular_vel" default="0.8" />
+<arg name="remote_joy/timeout_duration" default="-1" />
+
+<!-- JOYSTICK -->
+<node respawn="true" pkg="joy" type="joy_node" name="remote_joy_node" >
+	<param name="dev" type="string" value="$(arg remote_joy/joystick_dev)" />
+	<remap from="joy" to="remote_joy_node/joy" />
+</node>
+
+<!-- JOYSTICK TELEOP -->
+<node respawn="true" pkg="joystick_teleop" type="joystick_teleop_node" name = "remote_joystick_teleop">
+    <param name="activate_button_id" value="1" type="int" />
+    <param name="axis_side_id" value="0" type="int" />
+    <param name="axis_linear_id" value="5" type="int" />
+    <param name="axis_angular_id" value="2" type="int" />
+    <param name="max_linear_vel" value="$(arg remote_joy/max_linear_vel)" type="double" />
+    <param name="max_side_vel" value="0.0" type="double" />
+    <param name="max_angular_vel" value="$(arg remote_joy/max_angular_vel)" type="double" />
+    <param name="timeout_duration" value="$(arg remote_joy/timeout_duration)" type="double" />
+    <remap from="~joy" to="remote_joy_node/joy" />
+</node>
+
+<!-- Push to talk button -->
+<!-- Arcade stick: Hori Real Arcade Pro V Hayabusa  button_id = 9 -->
+<!-- Logitech F710 controller  button_id = 7 -->
+<node respawn="true" pkg="joystick_teleop" type="button_state_publisher" name = "button_state_publisher">
+    <remap from="~joy" to="/remote_joy_node/joy" />
+    <remap from="~state" to="/push_to_talk" />
+    <param name="button_id" value="9" type="int" />
+</node>
+
+<!-- MIC -->
+<node name="audio_capture_operator_mic" pkg="audio_capture" type="audio_capture" output="screen">
+	<remap from="audio" to="audio_operator"/>
+	<param name="device" value="$(arg audio_device_operator_mic)"/>
+	<param name="channels" value="1"/>
+	<param name="sample_rate" value="16000"/>
+	<param name="sample_format" value="S16LE"/>
+	<param name="format" value="wave"/>
+</node>
+
+<!-- Push to talk speech switch -->
+<node respawn="true" pkg="audio_switch" type="audio_switch_node.py" name = "audio_switch">
+    <remap from="audio_in" to="audio_operator"/>
+    <remap from="switch" to="/push_to_talk"/>
+    <remap from="audio_out" to="audio_operator_push_to_talk"/>
+</node>
+
+<!-- PLAY SOUND -->
+<node name="audio_play_operator_speaker" pkg="audio_play" type="audio_play" output="screen">
+	<remap from="audio" to="/audio_robot_mic"/>
+	<param name="device" value="$(arg device_audio_operator_speaker)"/>
+	<param name="channels" value="1"/>
+	<param name="sample_rate" value="16000"/>
+	<param name="sample_format" value="S16LE"/>
+	<param name="format" value="wave"/>
+</node>
+
+<!-- Image modification with HT data -->
+<node pkg="amano_b4" type="interface_with_image.py" name="pub_target">
+</node>
+
+<node pkg="image_view2" type="image_view2" name="image_view2" args="image:=/my_image_raw"/>
+
+<node pkg="amano_b4" type="publish_position.py" name="pub_point"   output="screen"/>
+
+<!-- VISUALIZER -->
+<node pkg="rviz" type="rviz" name="rviz" args="--display-config $(find amano_b4)/rviz/amano_operator.rviz">
+</node>
+
+</launch>

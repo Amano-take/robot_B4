@@ -305,7 +305,7 @@ class movement_decider():
                 return cx ** 2 + cy ** 2
     
 class ht2list():
-    max_list_len = 50
+    max_list_len = 100
     human_size = 0.1
     meet_t = 0.5
     #min_t * meet_t_index = meet_t

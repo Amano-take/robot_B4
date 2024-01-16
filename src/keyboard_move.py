@@ -10,7 +10,7 @@ from pynput.keyboard import Key, Listener
 
 from geometry_msgs.msg import Twist
 
-pub = rospy.Publisher("cmd_vel", Twist, queue_size=1)
+pub = rospy.Publisher("/remote_joystick_teleop/cmd_vel", Twist, queue_size=1)
 def on_press(key):
     print(key)
     

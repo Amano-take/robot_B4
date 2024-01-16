@@ -57,8 +57,8 @@ class interface():
             s = 100
             r = 100
             for hp1, hp2 in self.humanpoint:
-                x1, y1, id, flag = hp1
-                x2, y2, id, flag = hp2
+                x1, y1, id, flag, vv = hp1
+                x2, y2, _, _, _ = hp2
                 x1, x2 = min(x1, x2), max(x1, x2)
                 if x2 - x1 < 20:
                     a = 20 - (x2 - x1)
@@ -121,7 +121,7 @@ class interface():
         humanpoints_in_cam = self.map2cam(rawlist)
         if humanpoints_in_cam is not None:
             self.humanpoint = humanpoints_in_cam
-            print(time.time())
+            #print(time.time())
 
         
     def _in_callback_sp(self, msg:PointStamped):
@@ -160,7 +160,7 @@ class interface():
             ans = []
             for raw in li:
                 temp = []
-                x, y, id, flag = raw
+                x, y, id, flag, vv = raw
                 ps = PointStamped()
                 ps.header.frame_id = "map"
                 ps.header.stamp = rospy.Time()
@@ -176,7 +176,7 @@ class interface():
                     transformed_point.point.y,
                     transformed_point.point.z)
                 ) 
-                temp.append([u, v, id, flag])
+                temp.append([u, v, id, flag, vv])
                 ps = PointStamped()
                 ps.header.frame_id = "map"
                 ps.header.stamp = rospy.Time()
@@ -192,7 +192,7 @@ class interface():
                     transformed_point.point.y,
                     transformed_point.point.z)
                 )            
-                temp.append([u, v, id, flag])
+                temp.append([u, v, id, flag, vv])
                 ans.append(temp)
             
             return ans

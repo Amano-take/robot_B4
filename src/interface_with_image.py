@@ -65,6 +65,25 @@ class interface():
                     x2 += a / 2
                     x1 -= a / 2
                 y1, y2 = min(y1, y2), max(y1, y2)
+                if vv is None:
+                    strcol = 0
+                    vv = 0
+                elif vv < 0.8:
+                    strcol = 0
+                elif vv < 0.9:
+                    strcol = 50
+                elif vv < 1.0:
+                    strcol = 100
+                elif vv < 1.1:
+                    strcol = 150
+                elif vv < 1.2:
+                    strcol = 200
+                else:
+                    strcol = 250
+
+                if strcol != -1:
+                    str_col = (0, 255 - strcol, strcol)
+                    cv_array = cv2.putText(cv_array, str(vv)[:4], (int(x1), int(y1)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, str_col, 2, cv2.LINE_AA)
                 if flag:
                         color = (0, 255, 0)
                 else :
@@ -164,9 +183,9 @@ class interface():
                 ps = PointStamped()
                 ps.header.frame_id = "map"
                 ps.header.stamp = rospy.Time()
-                ps.point.x = x -0.1
-                ps.point.y = y - 0.1
-                ps.point.z = 1.7
+                ps.point.x = x
+                ps.point.y = y
+                ps.point.z = 2.5
                 #transformed_point = listener.transformPoint( "head_camera", ps)
                 transformed_point = tf2_geometry_msgs.do_transform_point(ps, trans)
                 if transformed_point.point.z < 0:
@@ -180,9 +199,9 @@ class interface():
                 ps = PointStamped()
                 ps.header.frame_id = "map"
                 ps.header.stamp = rospy.Time()
-                ps.point.x = x + 0.1
-                ps.point.y = y + 0.1
-                ps.point.z = 0
+                ps.point.x = x 
+                ps.point.y = y
+                ps.point.z = 0.5
                 #transformed_point = listener.transformPoint("head_camera", ps)
                 transformed_point = tf2_geometry_msgs.do_transform_point(ps, trans)
                 if transformed_point.point.z < 0:

@@ -116,8 +116,8 @@ class pubposition():
 
 
 class set_goal():
-    meet_t = 0.5
-    distance = 0.5
+    meet_t = 1.2
+    distance = 1.2
 
     def __init__(self) -> None:
         self.ht2l = ht2list()
@@ -179,7 +179,7 @@ class set_goal():
         try:
             x, y, vx, vy = self.ht2l.pos_and_vel_with_index(index, self.now)
             if vx ** 2 + vy ** 2 < 10 ** (-1):
-                return True
+                return True, None
             robx, roby = robxy
             goalx, goaly = Triangle_r_v.dest(x+vx*set_goal.meet_t - robx, y+vy*set_goal.meet_t- roby, vx, vy)
             return True, math.sqrt(vx**2 + vy**2)

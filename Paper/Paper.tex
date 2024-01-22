@@ -1,31 +1,16 @@
 
 \documentclass{kuisthesis}
 
-\usepackage{comment}
+
 \usepackage{float}
 \usepackage{color}
 \usepackage{multicol}
 \usepackage[dvipdfmx]{pict2e}
-\usepackage{wrapfig}
 \usepackage{graphicx}
-\usepackage{bm}
-\usepackage{url}
-\usepackage{underscore}
-\usepackage{colortbl}
-\usepackage{tabularx}
-\usepackage{fancyhdr}
 \usepackage{ulem}
-\usepackage{cite}
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{algorithmic}
-\usepackage{textcomp}
-\usepackage{xcolor}
-\usepackage[ipaex]{pxchfon}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{ulem}
+\usepackage{amsmath,amssymb}
 
-\jtitle{警備員ロボットの抑止力向上のためのオペレータ支援システムの開発}
+\jtitle[警備員ロボットの抑止力向上のためのオペレータ支援システムに関する研究]{警備員ロボットの抑止力向上のための\\オペレータ支援システムに関する研究}
 \jauthor{天野 岳洋}
 \supervisor{神田 崇行}
 \date{2024年1月31日}
@@ -536,7 +521,7 @@ H'_y = H_y + 1.2 * \frac{V_{hy}}{\sqrt{V_{hx}^2 + V_{hy}^2}}
 実験の様子を図\ref{fig: Experiment}に示す。
 \begin{figure}[H]
   \includegraphics[width=15cm]{img/Experiment.png}
-  \caption{実験の様子}
+  \caption{実験環境}
   \label{fig: Experiment}
 \end{figure}
 
@@ -561,6 +546,21 @@ H'_y = H_y + 1.2 * \frac{V_{hy}}{\sqrt{V_{hx}^2 + V_{hy}^2}}
 残りの5組は実験当日にロボットの近くで歩きスマホをしていたATCへの来場者であった。
 \subsection{実験結果}
 事前協力者には図\ref{fig: Strategy}における文言3,4,5,6,7の5種類の注意文言を用いて1回ずつ計5回注意を行った。
+以下図\ref{fig: Experimentjani}, 図\ref{fig: Experimentjani2}に注意の様子を示す。
+\begin{figure}[h]
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{img/jani2.png}
+    \caption{実験の様子1}
+    \label{fig: Experimentjani}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{img/jani3.png}
+    \caption{実験の様子2}
+    \label{fig: Experimentjani2}
+  \end{subfigure}
+\end{figure}
 その後のインタビューでは次のような意見が得られた。
 \begin{itemize}
   \item 容姿の特徴を述べる注意文言では、周囲の人の注目をひきつけた結果無視することが難しかった。
@@ -579,12 +579,45 @@ H'_y = H_y + 1.2 * \frac{V_{hy}}{\sqrt{V_{hx}^2 + V_{hy}^2}}
   \item[Case3] 男性1人で平均的な速度であった。一度目の注意に対して、英語で「私は中国人なので中国語で話して」と返答があったため、
   中国語を話せる人にオペレータを代わってもらい、中国語で注意を行ったところロボットを凝視したのちに歩きスマホをやめ歩行を再開したが、
   その後しばらくの間もロボットを見ていた。
-  \item[Case4] 男性1人でスーツを着用しており、歩行速度はかなり早めであった。一度目の注意が終わった時点で
-  歩きスマホを継続したまま足早に立ち去ってしまったため、2度目の注意は行わなかった。
+  \item[Case4] 男性1人で歩行速度はかなり遅めであった。1度目の注意でこちらに少し目を向け歩きスマホをやめ歩行速度を速めた。そのため
+  2度目の注意は行わなかったが、実際はしばらくしたのちに歩きスマホを再開していた。
   \item[Case5] 男女複数名のグループで全員スーツを着用しており、そのうち1人の女性が歩きスマホをしていた。グループ全体の歩行速度は平均的であった。
   一度目の注意で歩きスマホをやめ、それ以上の注意は行わなかった。その後グループの何人かがロボットのほうを見て
   ロボットについて話をしていた。
 \end{enumerate}
+それぞれの注意の様子を図にも示す。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/Case1.png}
+  \caption{Case1}
+  \label{fig: Case1}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/Case2.png}
+  \caption{Case2}
+  \label{fig: Case2}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/Case3.png}
+  \caption{Case3}
+  \label{fig: Case3}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/Case4.png}
+  \caption{Case4}
+  \label{fig: Case4}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/Case5.png}
+  \caption{Case5}
+  \label{fig: Case5}
+\end{figure}
+
+
 
 \subsection{実験結果の考察}
 実験での観察から注意文言の選択の重要な属性として、周囲の状況、歩行速度、恰好、グループの人数、注意された際の反応があると考えられる。
@@ -641,8 +674,8 @@ Case3で歩きスマホをやめた理由として、
 ます。
 
 %=====================================================================================
-
-\bibliography{citation.bib} %bibtexファイルの読み込み
+\nocite{*}
+\bibliography{citation} %bibtexファイルの読み込み
 \bibliographystyle{kuisunsrt} %本文に\cite{}を入れることで，参考文献表示
 
 \end{document}

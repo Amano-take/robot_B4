@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  21 JAN 2024 17:21
+=======
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  22 JAN 2024 06:53
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -516,6 +520,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 \tf@toc=\write4
 \openout4 = `Paper.toc'.
 
+<<<<<<< HEAD
 [1002] [1] [2] [3] [4] [5]
 File: img/system_compose.drawio.png Graphic file (type bmp)
 <img/system_compose.drawio.png>
@@ -525,6 +530,18 @@ Overfull \hbox (22.66086pt too wide) in paragraph at lines 253--254
  []
 
 [6]
+=======
+[1002] [1] [2] [3] [4] [5] [6]
+LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 251.
+File: img/system_compose.drawio.png Graphic file (type bmp)
+<img/system_compose.drawio.png>
+
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 256--257
+[][] 
+ []
+
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -532,13 +549,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: img/interface.png Graphic file (type bmp)
 <img/interface.png>
 
+<<<<<<< HEAD
 Overfull \hbox (22.66086pt too wide) in paragraph at lines 317--318
+=======
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 320--321
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
 [][] 
  []
 
 [9] [10] [11]
 File: img/CDT.png Graphic file (type bmp)
 <img/CDT.png>
+<<<<<<< HEAD
 [12]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -549,12 +571,26 @@ File: img/Experiment.png Graphic file (type bmp)
 
 Overfull \hbox (22.66086pt too wide) in paragraph at lines 537--538
 [][] 
+=======
+[12] [13] [14] [15]
+File: img/Experiment.png Graphic file (type bmp)
+<img/Experiment.png>
+
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 538--539
+[][] 
+ []
+
+
+Overfull \hbox (5.98521pt too wide) in paragraph at lines 535--541
+[]\JY1/mc/m/n/12 警備員の格好をしたアバタ ーロボ ッ トを用い 、 大型のシ ョ ッ ピングモ ール \T1/zpltlf/m/n/12 (ATC[][][])
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
  []
 
 [16]
 File: img/waystostop.drawio.png Graphic file (type bmp)
 <img/waystostop.drawio.png>
 
+<<<<<<< HEAD
 Overfull \hbox (22.66086pt too wide) in paragraph at lines 543--544
 [][] 
  []
@@ -565,6 +601,13 @@ Overfull \hbox (1.48576pt too wide) in paragraph at lines 550--551
  []
 
 [18] (out/Paper.bbl [19] [20]) [21] (out/Paper.aux)
+=======
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 545--546
+[][] 
+ []
+
+[17] [18] [19] [20] (out/Paper.bbl [21] [22]) [23] (out/Paper.aux)
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01> patch level 1
@@ -572,6 +615,7 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  7314 strings out of 474824
  112461 string characters out of 5763823
  1937387 words of memory out of 5000000
@@ -581,3 +625,14 @@ Here is how much of TeX's memory you used:
  100i,12n,110p,487b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on out/Paper.dvi (24 pages, 83160 bytes).
+=======
+ 7341 strings out of 474824
+ 112743 string characters out of 5763823
+ 1937387 words of memory out of 5000000
+ 29474 multiletter control sequences out of 15000+600000
+ 604658 words of font info for 121 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 100i,12n,110p,487b,430s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on out/Paper.dvi (26 pages, 90124 bytes).
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023

@@ -211,9 +211,33 @@ INPUT out/Paper.toc
 INPUT out/Paper.toc
 INPUT out/Paper.toc
 OUTPUT out/Paper.toc
+<<<<<<< HEAD
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
+=======
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT ./img/system_compose.drawio.png
+INPUT ./img/system_compose.drawio.png
+INPUT ./img/system_compose.drawio.png
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
 INPUT extractbb -B cropbox -O img/system_compose.drawio.png
 INPUT ./img/interface.png
 INPUT ./img/interface.png

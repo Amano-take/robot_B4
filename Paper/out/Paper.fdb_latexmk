@@ -1,12 +1,20 @@
 # Fdb version 4
+<<<<<<< HEAD
 ["bibtex out/Paper"] 1705824527.51964 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1705825313.20887 0
   "./citation.bib" 1705748513 13218 e33b67723d50739aa75bfe7d9b1e4b52 ""
   "./kuisunsrt.bst" 1558734156 22110 8367202202bd59402db2507285eff8fb ""
   "out/Paper.aux" 1705825307 6970 99dfffdaade6f7e7d687064a2c015dd9 "latex"
+=======
+["bibtex out/Paper"] 1705873790.73455 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1705874030.62648 0
+  "./citation.bib" 1705748513 13218 e33b67723d50739aa75bfe7d9b1e4b52 ""
+  "./kuisunsrt.bst" 1558734156 22110 8367202202bd59402db2507285eff8fb ""
+  "out/Paper.aux" 1705874025 6454 01324c539eda61e8a7807937a827f479 "latex"
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
   (generated)
   "out/Paper.bbl"
   "out/Paper.blg"
   (rewritten before read)
+<<<<<<< HEAD
 ["dvipdf"] 1705825308.92486 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1705825313.21696 0
   "out/Paper.dvi" 1705825307 83160 a6c721ffdee0ff631a2afb7db6f1ae53 "latex"
   (generated)
@@ -15,6 +23,16 @@
 ["latex"] 1705825302.86284 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1705825313.20926 0
   "Paper.tex" 1705825301 48356 6370942e5e583b5c43f260b54b6cd56f ""
   "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1705825301 48356 6370942e5e583b5c43f260b54b6cd56f ""
+=======
+["dvipdf"] 1705874026.46684 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1705874030.63399 0
+  "out/Paper.dvi" 1705874025 90124 8598365f8dc1e259ad05b3dad15240eb "latex"
+  (generated)
+  "out/Paper.pdf"
+  (rewritten before read)
+["latex"] 1705874020.63551 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1705874030.62686 0
+  "Paper.tex" 1705874019 54780 edb2c675e9b098cddffdc7968da404fc ""
+  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1705874019 54780 edb2c675e9b098cddffdc7968da404fc ""
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1705622889 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1705621961 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1705621961 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -22,6 +40,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1705629197 1196 1be730212205a270378fba11a44765dc ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm" 1705629197 856 7404843a5f798859944d7973a47821d5 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1705629197 856 39c171483fe1bb7d0e1368980c0c205b ""
+<<<<<<< HEAD
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1705617217 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1705617217 1120 200be8b775682cdf80acad4be5ef57e4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1705617217 1004 54797486969f23fa377b128694d548df ""
@@ -35,6 +54,30 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1705620149 1116 4e6ba9d7914baa6482fd69f67d126380 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1705620149 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1705620149 1344 8a0be4fe4d376203000810ad4dc81558 ""
+=======
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1705617217 1120 1e8878807317373affa7f7bba4cf2f6a ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1705617217 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1705617217 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1705617217 1120 200be8b775682cdf80acad4be5ef57e4 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1705617217 1004 54797486969f23fa377b128694d548df ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1705617217 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm" 1705617217 1496 c79f6914c6d39ffb3759967363d1be79 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm" 1705617217 1516 a3bf6a5e7ec4401b1f52092dfaaed242 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm" 1705617217 1508 6e807ff901c35a5f1fde0ca275533df8 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib8.tfm" 1705617217 1528 dab402b9d3774ca98baa037071cee7ae ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1705617217 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1705617217 924 9904cf1d39e9767e7a3622f2a125a565 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1705617217 928 2dc8d444221b7a635bb58038579b861a ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1705617217 908 2921f8a10601f252058503cc6570e581 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1705617217 940 75ac932a52f80982a9f8ea75d03a34cf ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1705617217 940 228d6584342e91276bf566bcf9716b83 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm" 1705620149 1116 4e6ba9d7914baa6482fd69f67d126380 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1705620149 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1705620149 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1705620149 1332 f817c21a1ba54560425663374f1b651a ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1705620149 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1705620149 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1705620149 1332 1fde11373e221473104d6cc5993f046e ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1705620149 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1705620149 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -127,9 +170,15 @@
   "img/waystostop.drawio.png" 1705346970 40668 9ff6cf7802918d59a9a1b3a8721229a1 ""
   "kuisthesis.cls" 1558734156 226 efab6b93c6e85f7190899aa9184acc12 ""
   "kuisthesis.sty" 1580138156 27701 98cc74217aaba3648c8fc07e63a6bc7a ""
+<<<<<<< HEAD
   "out/Paper.aux" 1705825307 6970 99dfffdaade6f7e7d687064a2c015dd9 "latex"
   "out/Paper.bbl" 1705824528 4326 64bce81e212554630e6a8915157e94ba "bibtex out/Paper"
   "out/Paper.toc" 1705825307 1866 99f9d24a09ac3cc4e1bc3e2a5f20dc00 "latex"
+=======
+  "out/Paper.aux" 1705874025 6454 01324c539eda61e8a7807937a827f479 "latex"
+  "out/Paper.bbl" 1705873791 4326 64bce81e212554630e6a8915157e94ba "bibtex out/Paper"
+  "out/Paper.toc" 1705874025 1496 de09d504e0cbb7483109aaaa05b810be "latex"
+>>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
   (generated)
   "out/Paper.aux"
   "out/Paper.dvi"

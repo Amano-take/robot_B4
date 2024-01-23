@@ -194,6 +194,7 @@ class set_goal():
         ans.point.x = x
         ans.point.y = y
         return ans
+    
         
     def go_target(self,t, pub=None, robxy = None, pub2 = None):
         if self.targetid == -1:

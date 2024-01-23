@@ -532,7 +532,33 @@ class ht2deq():
         self.unique = uniqueid
         self.beftxy = [0, 0, 0]
         self.aftxy = [0, 0, 0]
-
+    
+    def calvel2(self):
+        # least square method
+        if len(self.deq) < ht2deq.minimum_for_vel:
+            return [0, 0]
+        else:
+            T = np.array([i[0] for i in self.deq])
+            X = np.array([i[1] for i in self.deq])
+            Y = np.array([i[2] for i in self.deq])
+            vx = np.sum((T - np.mean(T)) * (X - np.mean(X))) / np.sum((T - np.mean(T)) ** 2)
+            vy = np.sum((T - np.mean(T)) * (Y - np.mean(Y))) / np.sum((T - np.mean(T)) ** 2)
+            return [vx, vy]
+    
+    def calvel_and_pose(self, t):
+        if len(self.deq) == 0:
+            return [100, 100], [0, 0]
+        elif abs(t - self.deq[-1][0]) < 1:
+            T = np.array([i[0] for i in self.deq])
+            X = np.array([i[1] for i in self.deq])
+            Y = np.array([i[2] for i in self.deq])
+            vx = np.sum((T - np.mean(T)) * (X - np.mean(X))) / np.sum((T - np.mean(T)) ** 2)
+            vy = np.sum((T - np.mean(T)) * (Y - np.mean(Y))) / np.sum((T - np.mean(T)) ** 2)
+            px = np.mean(X) + vx * (t - np.mean(T))
+            py = np.mean(Y) + vy * (t - np.mean(T))
+            return [px, py], [vx, vy]
+        else:
+            return [100, 100], [0, 0]
 
 class test():
     def __init__(self) -> None:

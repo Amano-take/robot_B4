@@ -1,13 +1,13 @@
 \begin{thebibliography}{10}
 
-\bibitem{takeuchi2020avatar}
-Takeuchi, K., Yamazaki, Y. and Yoshifuji, K.: Avatar work: Telework for disabled people unable to go outside by using avatar robots,  {\em Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction\/}, pp.\ 53--60 (2020).
-
 \bibitem{ozimek2020future}
 Ozimek, A.: The future of remote work, {\em Available at SSRN 3638597\/} (2020).
 
 \bibitem{FERREIRA202170}
 Ferreira, R., Pereira, R., Bianchi, I.~S. and {da Silva}, M.~M.: Decision Factors for Remote Work Adoption: Advantages, Disadvantages, Driving Forces and Challenges, {\em Journal of Open Innovation: Technology, Market, and Complexity\/},  Vol.~7, No.~1, p.~70 (2021).
+
+\bibitem{takeuchi2020avatar}
+Takeuchi, K., Yamazaki, Y. and Yoshifuji, K.: Avatar work: Telework for disabled people unable to go outside by using avatar robots,  {\em Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction\/}, pp.\ 53--60 (2020).
 
 \bibitem{Schneider2022}
 Schneider, S., Liu, Y., Tomita, K. and Kanda, T.: Stop Ignoring Me! On Fighting the Trivialization of Social Robots in Public Spaces, {\em J. Hum.-Robot Interact.\/},  Vol.~11, No.~2 (2022).
@@ -51,5 +51,8 @@ Daneshmand, M., Even, J. and Kanda, T.: Effortless Polite Telepresence Using Int
 
 \bibitem{mumm2011human}
 Mumm, J. and Mutlu, B.: Human-robot proxemics: physical and psychological distancing in human-robot interaction,  {\em Proceedings of the 6th international conference on Human-robot interaction\/}, pp.\ 331--338 (2011).
+
+\bibitem{Kanda2010}
+Kanda, T., Shiomi, M., Miyashita, Z., Ishiguro, H. and Hagita, N.: A Communication Robot in a Shopping Mall, {\em IEEE Transactions on Robotics\/},  Vol.~26, No.~5, pp.\ 897--913 (2010).
 
 \end{thebibliography}

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  21 JAN 2024 17:21
-=======
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  22 JAN 2024 06:53
->>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  24 JAN 2024 05:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -250,9 +246,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 \c@table=\count282
 \PF@fnotectr=\count283
 \PF@page=\count284
-)) (c:/texlive/2023/texmf-dist/tex/latex/comment/comment.sty
-\CommentStream=\write3
-Excluding comment 'comment') (c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+)) (c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count285
 \float@exts=\toks25
@@ -352,13 +346,6 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 \pIIe@tempdimd=\dimen195
 \pIIe@tempdime=\dimen196
 \pIIe@tempdimf=\dimen197
-) (c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen198
-\WF@size=\dimen199
-\c@WF@wrappedlines=\count296
-\WF@box=\box121
-\WF@everypar=\toks28
-Package: wrapfig 2003/01/31  v 3.6
 ) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
@@ -368,246 +355,159 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvips.def on input line 107.
 )
-\Gin@req@height=\dimen256
-\Gin@req@width=\dimen257
-) (c:/texlive/2023/texmf-dist/tex/latex/underscore/underscore.sty
-Package: underscore 2006/09/13
-LaTeX Info: Redefining \_ on input line 42.
-) (c:/texlive/2023/texmf-dist/tex/latex/firstaid/underscore-ltx.sty
-Package: underscore-ltx 2023/09/20 LaTeX firstaid to make underscore protected 
-) (c:/texlive/2023/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
-(c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty
-Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen258
-\ar@mcellbox=\box122
-\extrarowheight=\dimen259
-\NC@list=\toks29
-\extratabsurround=\skip54
-\backup@length=\skip55
-\ar@cellbox=\box123
-)
-\everycr=\toks30
-\minrowclearance=\skip56
-\rownum=\count297
-) (c:/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
-Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen260
-\TX@old@table=\dimen261
-\TX@old@col=\dimen262
-\TX@target=\dimen263
-\TX@delta=\dimen264
-\TX@cols=\count298
-\TX@ftn=\toks31
-) (c:/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip57
-\f@nch@O@elh=\skip58
-\f@nch@O@erh=\skip59
-\f@nch@O@olh=\skip60
-\f@nch@O@orh=\skip61
-\f@nch@O@elf=\skip62
-\f@nch@O@erf=\skip63
-\f@nch@O@olf=\skip64
-\f@nch@O@orf=\skip65
+\Gin@req@height=\dimen198
+\Gin@req@width=\dimen199
 ) (c:/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box124
-\UL@hyphenbox=\box125
-\UL@skip=\skip66
-\UL@hook=\toks32
-\UL@height=\dimen265
-\UL@pe=\count299
-\UL@pixel=\dimen266
-\ULC@box=\box126
+\UL@box=\box121
+\UL@hyphenbox=\box122
+\UL@skip=\skip54
+\UL@hook=\toks28
+\UL@height=\dimen256
+\UL@pe=\count296
+\UL@pixel=\dimen257
+\ULC@box=\box123
 Package: ulem 2019/11/18
-\ULdepth=\dimen267
-) (c:/texlive/2023/texmf-dist/tex/latex/algorithms/algorithmic.sty
-Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count300
-\c@ALC@line=\count301
-\c@ALC@rem=\count302
-\c@ALC@depth=\count303
-\ALC@tlm=\skip67
-\algorithmicindent=\skip68
-) (c:/texlive/2023/texmf-dist/tex/platex/pxchfon/pxchfon.sty
-Package: pxchfon 2023/08/28 v2.0
-) (c:/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen268
-\lightrulewidth=\dimen269
-\cmidrulewidth=\dimen270
-\belowrulesep=\dimen271
-\belowbottomsep=\dimen272
-\aboverulesep=\dimen273
-\abovetopsep=\dimen274
-\cmidrulesep=\dimen275
-\cmidrulekern=\dimen276
-\defaultaddspace=\dimen277
-\@cmidla=\count304
-\@cmidlb=\count305
-\@aboverulesep=\dimen278
-\@belowrulesep=\dimen279
-\@thisruleclass=\count306
-\@lastruleclass=\count307
-\@thisrulewidth=\dimen280
-) (c:/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip69
-\multirow@cntb=\count308
-\multirow@dima=\skip70
-\bigstrutjot=\dimen281
+\ULdepth=\dimen258
 ) (out/Paper.aux)
 \openout1 = `Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-\c@mv@tabular=\count309
-\c@mv@boldtabular=\count310
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+\c@mv@tabular=\count297
+\c@mv@boldtabular=\count298
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 33.
+(Font)              scaled to size 14.4pt on input line 21.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 33.
+(Font)              scaled to size 17.28pt on input line 21.
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 33.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 33.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 33.
+(Font)              scaled to size 17.28pt on input line 21.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 33.
+(Font)              scaled to size 20.74pt on input line 21.
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <20.74> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 33.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <20.74> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 33.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 20.74pt on input line 33.
+(Font)              scaled to size 20.74pt on input line 21.
 [1000]
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 36.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 36.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 36.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 36.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 36.
-[1001] (out/Paper.toc)
-\tf@toc=\write4
-\openout4 = `Paper.toc'.
+(Font)              scaled to size 14.4pt on input line 24.
+[1001] [1002] [1003] [1004] (out/Paper.toc)
+\tf@toc=\write3
+\openout3 = `Paper.toc'.
 
-<<<<<<< HEAD
-[1002] [1] [2] [3] [4] [5]
-File: img/system_compose.drawio.png Graphic file (type bmp)
-<img/system_compose.drawio.png>
-
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 253--254
-[][] 
- []
-
-[6]
-=======
-[1002] [1] [2] [3] [4] [5] [6]
+[1005]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 251.
+(Font)              scaled to size 10.0pt on input line 115.
+[1] [2] [3] [4] [5] [6] [7]
 File: img/system_compose.drawio.png Graphic file (type bmp)
 <img/system_compose.drawio.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 256--257
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 371--372
 [][] 
  []
 
->>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
+[8]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7] [8]
+[9] [10] [11]
+Overfull \hbox (90.74059pt too wide) detected at line 433
+[]
+ []
+
+
+Overfull \hbox (23.09317pt too wide) detected at line 433
+[][]
+ []
+
+[12]
+File: img/simulation1.png Graphic file (type bmp)
+<img/simulation1.png>
+File: img/simulation2.png Graphic file (type bmp)
+<img/simulation2.png>
+File: img/simulation3.png Graphic file (type bmp)
+<img/simulation3.png>
+File: img/simulation4.png Graphic file (type bmp)
+<img/simulation4.png>
+[13]
 File: img/interface.png Graphic file (type bmp)
 <img/interface.png>
 
-<<<<<<< HEAD
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 317--318
-=======
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 320--321
->>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 530--531
 [][] 
  []
 
-[9] [10] [11]
 File: img/CDT.png Graphic file (type bmp)
 <img/CDT.png>
-<<<<<<< HEAD
-[12]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13] [14] [15]
+[14] [15] [16] [17] [18] [19]
 File: img/Experiment.png Graphic file (type bmp)
 <img/Experiment.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 537--538
-[][] 
-=======
-[12] [13] [14] [15]
-File: img/Experiment.png Graphic file (type bmp)
-<img/Experiment.png>
-
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 538--539
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 690--691
 [][] 
  []
 
-
-Overfull \hbox (5.98521pt too wide) in paragraph at lines 535--541
-[]\JY1/mc/m/n/12 警備員の格好をしたアバタ ーロボ ッ トを用い 、 大型のシ ョ ッ ピングモ ール \T1/zpltlf/m/n/12 (ATC[][][])
->>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
- []
-
-[16]
 File: img/waystostop.drawio.png Graphic file (type bmp)
 <img/waystostop.drawio.png>
 
-<<<<<<< HEAD
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 543--544
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 697--698
 [][] 
  []
 
-[17]
-Overfull \hbox (1.48576pt too wide) in paragraph at lines 550--551
-[]\JY1/mc/m/n/12 歩きスマホをやめなか っ た場合 、 反応から最も適切だと思う注意文言 \T1/zpltlf/m/n/12 3,4,5,6,7
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20]
+File: img/jani2.png Graphic file (type bmp)
+<img/jani2.png>
+File: img/jani3.png Graphic file (type bmp)
+<img/jani3.png>
+[21] [22]
+File: img/Case3.jpg Graphic file (type bmp)
+<img/Case3.jpg>
+
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 761--762
+ [][] 
  []
 
-[18] (out/Paper.bbl [19] [20]) [21] (out/Paper.aux)
-=======
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 545--546
-[][] 
- []
-
-[17] [18] [19] [20] (out/Paper.bbl [21] [22]) [23] (out/Paper.aux)
->>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
+[23] [24] (out/Paper.bbl [25] [26]) [27] (out/Paper.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01> patch level 1
@@ -615,24 +515,12 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 7314 strings out of 474824
- 112461 string characters out of 5763823
+ 5956 strings out of 474824
+ 90040 string characters out of 5763823
  1937387 words of memory out of 5000000
- 29456 multiletter control sequences out of 15000+600000
- 597173 words of font info for 103 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 100i,12n,110p,487b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on out/Paper.dvi (24 pages, 83160 bytes).
-=======
- 7341 strings out of 474824
- 112743 string characters out of 5763823
- 1937387 words of memory out of 5000000
- 29474 multiletter control sequences out of 15000+600000
+ 28125 multiletter control sequences out of 15000+600000
  604658 words of font info for 121 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 100i,12n,110p,487b,430s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,17n,110p,1082b,482s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Paper.dvi (26 pages, 90124 bytes).
->>>>>>> 2c69d2baa55a56b5e7c934f3cf76784192fe6023
+Output written on out/Paper.dvi (33 pages, 114204 bytes).

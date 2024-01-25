@@ -201,10 +201,17 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT ./img/interface.png
+INPUT ./img/interface.png
+INPUT ./img/interface.png
+INPUT extractbb -B cropbox -O img/interface.png
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT extractbb -B cropbox -O img/system_compose.drawio.png
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm
 INPUT ./img/simulation1.png
 INPUT ./img/simulation1.png
 INPUT ./img/simulation1.png
@@ -221,10 +228,6 @@ INPUT ./img/simulation4.png
 INPUT ./img/simulation4.png
 INPUT ./img/simulation4.png
 INPUT extractbb -B cropbox -O img/simulation4.png
-INPUT ./img/interface.png
-INPUT ./img/interface.png
-INPUT ./img/interface.png
-INPUT extractbb -B cropbox -O img/interface.png
 INPUT ./img/CDT.png
 INPUT ./img/CDT.png
 INPUT ./img/CDT.png
@@ -245,10 +248,18 @@ INPUT ./img/jani3.png
 INPUT ./img/jani3.png
 INPUT ./img/jani3.png
 INPUT extractbb -B cropbox -O img/jani3.png
-INPUT ./img/Case3.jpg
-INPUT ./img/Case3.jpg
-INPUT ./img/Case3.jpg
-INPUT extractbb -B cropbox -O img/Case3.jpg
+INPUT ./img/Case2-1.png
+INPUT ./img/Case2-1.png
+INPUT ./img/Case2-1.png
+INPUT extractbb -B cropbox -O img/Case2-1.png
+INPUT ./img/Case2-2.png
+INPUT ./img/Case2-2.png
+INPUT ./img/Case2-2.png
+INPUT extractbb -B cropbox -O img/Case2-2.png
+INPUT ./img/Case2-3.png
+INPUT ./img/Case2-3.png
+INPUT ./img/Case2-3.png
+INPUT extractbb -B cropbox -O img/Case2-3.png
 INPUT out/Paper.bbl
 INPUT out/Paper.bbl
 INPUT out/Paper.bbl

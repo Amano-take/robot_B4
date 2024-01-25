@@ -10,46 +10,46 @@ Warning--Missing required argument pages in Schneider2022
 Warning--there's a series but neither volume nor number in Midden2009
 Warning--there's no number and/or volumeDaneshmand2023
 Warning--Missing required argument pages in Daneshmand2023
-You've used 18 entries,
+You've used 21 entries,
             2159 wiz_defined-function locations,
-            634 strings with 8243 characters,
-and the built_in function-call counts, 5749 in all, are:
-= -- 468
-> -- 216
-< -- 13
-+ -- 84
-- -- 66
-* -- 421
-:= -- 755
-add.period$ -- 19
-call.type$ -- 18
+            652 strings with 9104 characters,
+and the built_in function-call counts, 6846 in all, are:
+= -- 557
+> -- 264
+< -- 16
++ -- 102
+- -- 81
+* -- 503
+:= -- 897
+add.period$ -- 22
+call.type$ -- 21
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 271
-empty$ -- 550
-format.name$ -- 132
-if$ -- 1409
+cite$ -- 27
+duplicate$ -- 320
+empty$ -- 649
+format.name$ -- 162
+if$ -- 1677
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 18
-newline$ -- 58
-num.names$ -- 18
-pop$ -- 55
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 67
+num.names$ -- 21
+pop$ -- 65
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 288
+skip$ -- 340
 stack$ -- 0
-substring$ -- 367
-swap$ -- 127
-text.length$ -- 13
+substring$ -- 442
+swap$ -- 151
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 53
-width$ -- 20
-write$ -- 152
-is.kanji.str$ -- 109
+while$ -- 65
+width$ -- 23
+write$ -- 177
+is.kanji.str$ -- 132
 (There were 6 warnings)

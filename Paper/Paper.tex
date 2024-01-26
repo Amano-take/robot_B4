@@ -40,8 +40,8 @@
 移動に関してロボットの歩行速度や人との遠近感をつかみづらいなどの理由から、
 予備実験では7人がロボットの近くで歩きスマホをしていたのに対し、実際に相手の視界に入って注意を行えたのは2人であった。
 そこでオペレータ支援のためにまず移動支援システムの開発を行った。
-これによってオペレータはカメラ映像上で歩きスマホをしている人の指定を行えば、システムが残りの
-移動先の予測や人の距離を保った移動、ロボットの向きの調整を担うことができるようになった。
+これによってオペレータはカメラ映像上で歩きスマホをしている人の指定を行うだけでよく、システムが
+移動先の予測や、それに基づいた人の距離を保った移動、ロボットの向きの調整を担うことができる。
 %もう少し難しさをアピールできたら <- OK
 
 %抑止力の向上のために注意文言に注目して、 <- OK
@@ -82,26 +82,38 @@
 
 
 \begin{eabstract}
-Avatar robots are becoming more and more popular, and working remotely through avatars is becoming a new way of working.
-For example, there are the avatar robot cafe "Bunshin Robot Cafe DAWN" or the security avatar robot ugo by ugo Co., Ltd. whose introduction to companies such as Mitsukan Group and Tohoku Electric Power Co., Ltd.
-Remote work has many advantages, such as no need to commute and improved work-life balance, but with the conventional remote work using meeting apps, it was difficult to do physical work.
-Even in such work, avatar robots have the great merit of making remote work possible, and it is expected to become more and more popular in the future. 
-Also, in the the act of admonishing that is considered important in various works, it is also a merit that can avoid trouble with the person who was warned by the robot.
-However, there are also major problems with the admonishing of robots.
-One is that the operation of the robot is difficult, and the other is that the robot lacks the power to stop.
-In this study, we assume a security avatar robot and consider a situation where warn a person using a smartphone while walking, 
-and develop a system to support the operator in such a situation.
+Avatar robots are becoming a new way of working, and it enable us to work remotely even in the field of business that requires physical work and can't be performed with such conventional remote work as using meeting apps.
+This is a great advantage of avatar robots because it eliminates the need for commuting and improves employees' work-life balance.
+Therefore, it is expected that work using avatar robots will become more and more popular in the future.
+In addition, one of the advantages of using avatar robots is that it is possible to avoid trouble with the person who is admonished through the robot.
+However, there are some problems with admonishing through the robot.
+One of them is the difficulty of moving the robot required to admonishing.
+This is because the robot's maximum moving speed is set lower for safety reasons, and also it is difficult to grasp the sense of distance between the robot and the person.
+Another problem is the lack of deterrence when the robot gives admonishment.
+The person who is admonished through a robot does not feel that he or she is being admonished by a human being, and it is easy to ignore the robot and it's admonishment.
+In this research, we aim to solve these problems by developing a system to support the operator.
+In the following, we consider the situation where a security robot admonishes a person who is walking while using a smartphone.
 
-Regarding movement, it was difficult to grasp the walking speed of the robot and the sense of distance from the person, and in the preliminary experiment, while there were 7 people who were walking and watching the smartphone near the robot, only 2 people were actually warned in the person's field of view.
-Therefore, we developed a movement support system for operator support. With this system, the operator can move the robot to the front of the person with a simple operation such as clicking on the person on the screen, and can follow the person as much as possible.
+First, we developed a system to support the operation required to give someone admonishment.
+With This system, all the operator have to do is select the person who is walking while using a smartphone on the camera image. 
+Then, the system predicts the one's destination, and moves the robot with maintaining the distance between people, adjusts the direction of the robot based on the prediction.
 
-Next, we assumed that when a person is warned about walking and watching a smartphone, he or she realizes that the cognition that "walking and watching a smartphone is dangerous" and the cognition that "I am walking and watching a smartphone" are contradictory, and that the contradiction in cognition causes discomfort, and that he or she stops the behavior to resolve the discomfort. According to the cognitive dissonance theory, there are three main ways to resolve this discomfort other than to stop the behavior. Therefore, we devised a warning phrase to counteract each of these methods, which are to emphasize the danger of walking and watching a smartphone, to prevent the other person from escaping, and to identify the other person. However, at the present stage, it is required that the operator estimate the other person's method of resolving the discomfort, which requires knowledge of cognitive dissonance theory and insight into the other person's behavior.
+Next, I considered that effective admonishment would improve the robot's deterrence.
+In order to consider effective admonitory words, we hypothesized that the following reason why admonished people sometimes do not change their behavior.
+They are aware of the contradiction between their belief that "walking while using a smartphone is dangerous" and their behavior of "walking while using a smartphone", and the discomfort caused by this contradiction would lead to change the behavior.
+However, there are three other ways to resolve this discomfort besides stopping the behavior, so some people do not stop the behavior.
+Therefore, we devised admonitory words that counteract each of these methods of resolution.
+However, at this stage, the operator is required to estimate the other person's method of resolution, which requires knowledge of cognitive dissonance theory and insight into the other person's behavior.
+Hence, in order to clarify which method of resolution was used and how effective the admonitory words were, we conducted an experiment in the field.
+We conducted a questionnaire survey on how the two participants who were asked for cooperation felt when they were given admonishment which counteracts the resolution, and observed the reactions of the five pairs of visitors who were walking while using a smartphone when they were given the admonishment.
+In the questionnaire survey, it was found that the feeling of isolation from being the only one being given one of devised admonishment  made it difficult to ignore the pressure from the surroundings.
+In the actual observation, it was suggested that the method of resolution could be estimated from the values of attributes such as walking speed and number of people in the group.
 
-Then, in order to clarify how each action was taken and whether the warning phrase was actually effective, we conducted an experiment at ATC, a shopping mall. We conducted a questionnaire on how the two participants who had been asked for cooperation felt when they were warned, and observed the reactions of five pairs of ATC visitors who were walking and watching smartphones. In the questionnaire, it was found that when the other person was identified, it was difficult to ignore the warning because of the feeling of isolation that only he or she was warned and the feeling of pressure from the surroundings. In the actual observation, it was suggested that the method of resolving the discomfort could be estimated from the values of walking speed and the number of people in the group.
-
-In this study, we developed a system to support the operator's movement and examined effective phrases for each method of resolving the discomfort. In addition, the experiment suggested that it is possible to estimate the method of resolving the discomfort from several values. In the future, it will be a challenge to build a prediction model of the method of resolving the discomfort by further experiments and to build a system that presents effective phrases to the operator.
-In addition, from the results of the questionnaire, it is possible that the reason for stopping walking and watching a smartphone is not only to resolve the discomfort, but also to conform to the pressure.
-Therefore, it is also a future task to compare these two strategies and examine a strategy that combines them.
+In this research, we developed a system to support the moving operation and considered effective admonitory words for each method of resolution.
+From the observation of the experiment, it was suggested that the method of resolution could be estimated from some values.
+In the future, by conducting further experiments and constructing a prediction model for the method of resolution, it will be possible to construct a system that presents effective words to the operator.
+In addition, the results of the questionnaire survey showed that there is a possibility that walking while using a smartphone can be stopped by the pressure of conformity.
+Therefore, it is also possible to construct a system that incorporates a strategy using the pressure of conformity.
 \end{eabstract}
 %=====================================================================================
 
@@ -214,29 +226,28 @@ Therefore, it is also a future task to compare these two strategies and examine 
 
 
 \section{関連研究}
-このセクションでは移動支援システムのを設計する上で、ロボットの接近行動に関しての研究について、
-また注意文言の検討を行う上で、
-HumanRobotInteraction(HRI) における認知的不協和理論を適用した研
-究、歩きスマホを注意しやめさせるといった、人の行動に影響を与えるた
-めに否定的なフィードバックや行動をとるロボットに関する研究について紹介を行う。そして
+このセクションでは移動支援システムを設計する上でロボットの接近行動に関する研究について、また
+また注意文言の検討に用いた認知的不協和理論をHumanRobotInteraction(HRI)分野に適用した研究について
+紹介を行う。さらに歩きスマホを注意しやめさせるといった、人の行動に影響を与えるた
+めに否定的なフィードバックや行動をとるロボットに関する研究についてそして
 注意文言提示システムのようなテレオペレーション支援に関する研究について様々な例と本研究との差
 異について説明を行う。
 \subsection{ロボットの接近行動に関する研究}
-ロボットを人間の近くに移動させることは人間とのコミュニケーションをとるうえで重要な行為であり、
+ロボットを人間の近くに移動させることは人間とコミュニケーションをとるうえで重要な行為であり、
 この行為に関する研究は多く存在する。例えば\cite{woods2006methodological}では、
 机の前に座っている人には後ろからや真正面から近づくよりも、斜め前から近づくほうが人にとって快適であることなどが示されている。
 また\cite{joosse2021making}ではロボットが人に十分に近づく際に、接近速度が速い(1.0m/s)ほうが、
 遅い(0.4m/s)ときに比べて、人のポジティブな反応(e.g., 笑顔を見せるや寄りかかるといった行動)が見られることが示されている。
 また\cite{satake2009approach}では人の過去の行動から人の経路予測やその人の意図を用い、
 ロボットが周囲の人々の中でもっとも話しかけやすい人への移動を行うようなアプローチ方法によって
-最も近い人に最短距離で近づくよりも、より無視されるや気づかれないといったことなく会話を始めれることが示されている。
-ほかにも最短距離で近づくよりも、途中で角度を変えて人に急接近するような近づきかたによって、
+最も近い人に最短距離で近づくよりも、無視される、気づかれないといったことなく会話を始めれることが示されている。
+他にも最短距離で近づくよりも、途中で角度を変えて人に急接近するような近づき方によって、
 ロボットの抑止力が上がることが示されている\cite{Mizumaru2019}。
 しかしこれらのように多くの研究では、自律ロボットを前提としておりある特定の人への近づき方に
 ついて研究を行っており、近づく人の選択はできないもしくは考慮されていない。\cite{Mizumaru2019}では
 近づくべき人が選択できるようになっているが、それはあくまでWizardOfOz手法の中で用いられているものでありインターフェースなどは
 作成されていない。そこで本研究ではアバターロボットを操作する際に、近づけるか否かや視野外に人がいるか等の情報をインターフェースを介してオペレータに提供することによって
-、オペレータが近づける人の中で自由に接近対象を選べるようにし、その後適切な方法で近づくことを可能にする。
+、オペレータが近づける人の中で自由に接近対象を選べるようにし、その後適切な方法で近づくことを可能にするシステムの開発を行う。
 
 \subsection{認知的不協和のHRIへの適用研究}
 %認知的不協和理論の説明ここで行う
@@ -445,8 +456,7 @@ HRI分野における認知的不協和理論の適用例を示す。例えば�
   \end{equation}
   ただし、$\overline{X}, \overline{T}$は式\ref{eq: average}によって求めらるものである。
   
-\ これらによって各人の速度及び現在位置がわかる。そのデータを次のゴール計算に用いる。また、過去のデータ数が4個に満たない場合、
-誤差が非常に大きいものとなってしまったため速度計算を行わない。またhuman\_trackerの仕様上、
+\ これらによって各人の速度及び現在位置がわかる。そのデータを次のゴール計算に用いる。またhuman\_trackerの仕様上、
 異なる人であっても同じidが用いられることが時々起こりうるので、その場合は過去に蓄えられたそのidに関する位置データをリセットしたのちに追加を行う。この検出は直近の位置データから大きく乖離している場合に、
 異なる人であると判定を行った。
   \item 衝突計算 \\
@@ -536,7 +546,7 @@ G_y = H'_y + V_{hy}t
   これは、人同士のパーソナルスペースにおいて親密でない場合の社会距離が1.2mから3.5mであることを考慮して決定した。
   3.5mよりも遠い場合には、その人と衝突可能な場合はその位置を送り不可能な場合追いつけないと判断し諦める。つまりこの時移動方法計算には何も送られない。
   これらのロボットの振る舞いを説明するために、シミュレーションした結果を
-  図\ref{pic:robot1}\ref{pic:robot2}\ref{pic:robot3}\ref{pic:robot4}に示す。
+  図\ref{pic:robot1}, \ref{pic:robot2}, \ref{pic:robot3}, \ref{pic:robot4}に示す。
   赤い点はロボットの位置、赤い矢印がロボットの進行方向、黒い矢印がロボットの向きを表している。
   また青い点、青い矢印は人の位置、進行方向を表しており、青い2つの円がそれぞれ3.5m、1.2mの距離を表している。
 \begin{figure}[H]
@@ -755,8 +765,8 @@ ROSを用いることで複数のプロセス間でのデータのやり取り�
 用いた注意文言は図\ref{fig: Strategy}の通りであり、一度目は全員に対して
 「歩きスマホは危険ですのでおやめください。」という文言を用いた。その後も歩きスマホを
 やめなかった場合には、図\ref{fig: Strategy}の3,4,5,6,7の文言を用いて注意喚起を行った。
-インタビューでは一人に対してそれぞれ一回ずつ計五回の注意を行い、
-ケーススタディでは一人につきいずれか一つを用いて一回のみ行った。
+ただしインタビューでは一回目の注意を無視するようにお願いし、
+一人に対してそれぞれ一回ずつ計五回の注意を行いった。
 なお二回目の注意でやめなかった場合であっても、それ以上の注意は行わない。
 
 \subsection{実験参加者}
@@ -883,7 +893,7 @@ Case3では用意した文言以外を用いることになったが歩きスマ
 それらの解消方法に対抗するような文言を考えた。しかし今のままでは、注意文言の選択に認知的不協和理論に関する知識や
 どのような行動の時どのような解消方法がとられているかといった情報が必要となるため、注意文言の選択を行うことが難しい。
 そこで第三に、解消方法の識別に必要な情報を得るための実験を行った。その結果として、
-いくつかの属性が解消方法の識別に重要であるや提案したもの以外の有効な注意文言が考えられることがわかった。
+いくつかの属性が解消方法の識別に重要であることや提案したもの以外の有効な注意文言が考えられることがわかった。
 将来課題として
 これらの属性を用いた解消方法の予測モデルの構築を行い、それを用い有効な注意文言の提示を行うシステムの構築や
 その他の戦略を取り入れることがあげられる。
@@ -891,8 +901,8 @@ Case3では用意した文言以外を用いることになったが歩きスマ
 %=====================================================================================
 \acknowledgments %章を付けずにタイトル表示
 本研究を行うにあたりご指導頂いた指導教員の神田崇行教授と Jani Even
-特定講師、今回の研究の予備実験を手伝ってくださった研究室の先輩、
-友人たち、そして実験を行うに当たって協力頂いたATRの方々と実験に協力してくださったATCの来客者の方々
+特定講師、今回の研究の予備実験を手伝ってくださった
+友人たち、本論文の執筆にあたり多くのご助言をいただいた先輩方、そして実験を行うに当たって協力頂いたATRの方々と実験に協力してくださったATCの来客者の方々
 に深い感謝の気持ちとお礼を申し上げ
 ます。
 

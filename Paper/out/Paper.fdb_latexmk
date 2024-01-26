@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex out/Paper"] 1706154013.91947 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1706154893.72057 0
+["bibtex out/Paper"] 1706252549.67613 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1706252570.84063 0
   "./citation.bib" 1706104993 14420 5d366317ff49ad2d8db919db152d7638 ""
   "./kuisunsrt.bst" 1558734156 22110 8367202202bd59402db2507285eff8fb ""
-  "out/Paper.aux" 1706154883 8860 ec085bef1fc8fc0eb327fd1d897ca0fa "latex"
+  "out/Paper.aux" 1706252560 8860 ec085bef1fc8fc0eb327fd1d897ca0fa "latex"
   (generated)
   "out/Paper.bbl"
   "out/Paper.blg"
   (rewritten before read)
-["dvipdf"] 1706154885.25475 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1706154893.72829 0
-  "out/Paper.dvi" 1706154883 122356 b8348ccbb843619f8da1d4285e0affc1 "latex"
+["dvipdf"] 1706252562.03406 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1706252570.84884 0
+  "out/Paper.dvi" 1706252560 122000 01d22aa4979d796028c29f8e65439f88 "latex"
   (generated)
   "out/Paper.pdf"
   (rewritten before read)
-["latex"] 1706154873.8583 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1706154893.72094 0
-  "Paper.tex" 1706154873 77276 e3652a8a49aef6f58c9a1156aaf0cc3e ""
-  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1706154873 77276 e3652a8a49aef6f58c9a1156aaf0cc3e ""
+["latex"] 1706252550.3384 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1706252570.84104 0
+  "Paper.tex" 1706252544 77157 e433977607b25d0f0d1a260f5a0a94c5 ""
+  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1706252544 77157 e433977607b25d0f0d1a260f5a0a94c5 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1705622889 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1705621961 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1705621961 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -122,7 +122,7 @@
   "img/Case2-2.png" 1706153378 852620 807ca6b729167090330a60c33a5123d2 ""
   "img/Case2-3.png" 1706153848 142772 50c55df4789cf5fd0433f6850d20ec53 ""
   "img/Experiment.png" 1706121156 1311416 ee89ea132f6ea3031fb8a561e5a07572 ""
-  "img/interface.png" 1706120359 324061 daebff090be5ca01d3bf11a5e7edf4b9 ""
+  "img/interface.png" 1706251473 381110 a663b9ab47036b24507351b0d510ae5f ""
   "img/jani2.png" 1705926254 1957653 d979d777392a49cd60a2535c8082c436 ""
   "img/jani3.png" 1705927642 1875032 b43cfc35b897ec81362c0f1a8602a2cd ""
   "img/simulation1.png" 1706145547 19982 26555206515bbde7758e36839b9d1ac9 ""
@@ -133,9 +133,9 @@
   "img/waystostop.drawio.png" 1706140084 34603 c997e35a9cfc4a7dfede05bd26093d0a ""
   "kuisthesis.cls" 1558734156 226 efab6b93c6e85f7190899aa9184acc12 ""
   "kuisthesis.sty" 1580138156 27701 98cc74217aaba3648c8fc07e63a6bc7a ""
-  "out/Paper.aux" 1706154883 8860 ec085bef1fc8fc0eb327fd1d897ca0fa "latex"
-  "out/Paper.bbl" 1706154014 5423 def63c845c77ebcba22c0e2ece37fd4d "bibtex out/Paper"
-  "out/Paper.toc" 1706154883 1695 bf9d41612aa3e64abfd9c4bef0500063 "latex"
+  "out/Paper.aux" 1706252560 8860 ec085bef1fc8fc0eb327fd1d897ca0fa "latex"
+  "out/Paper.bbl" 1706252550 5423 def63c845c77ebcba22c0e2ece37fd4d "bibtex out/Paper"
+  "out/Paper.toc" 1706252560 1695 bf9d41612aa3e64abfd9c4bef0500063 "latex"
   (generated)
   "out/Paper.aux"
   "out/Paper.dvi"

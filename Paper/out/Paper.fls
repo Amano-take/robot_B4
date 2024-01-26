@@ -228,10 +228,6 @@ INPUT ./img/simulation4.png
 INPUT ./img/simulation4.png
 INPUT ./img/simulation4.png
 INPUT extractbb -B cropbox -O img/simulation4.png
-INPUT ./img/CDT.png
-INPUT ./img/CDT.png
-INPUT ./img/CDT.png
-INPUT extractbb -B cropbox -O img/CDT.png
 INPUT ./img/Experiment.png
 INPUT ./img/Experiment.png
 INPUT ./img/Experiment.png

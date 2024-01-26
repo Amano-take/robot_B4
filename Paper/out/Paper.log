@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  26 JAN 2024 16:02
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  26 JAN 2024 22:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -434,19 +434,19 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 
 [1005]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 137.
+(Font)              scaled to size 10.0pt on input line 136.
 [1] [2] [3] [4] [5] [6] [7] [8] [9]
 File: img/interface.png Graphic file (type bmp)
 <img/interface.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 417--418
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 408--409
 [][] 
  []
 
 File: img/system_compose.drawio.png Graphic file (type bmp)
 <img/system_compose.drawio.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 423--424
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 414--415
 [][] 
  []
 
@@ -455,55 +455,48 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10] [11] [12]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 484.
-[13] [14]
+(Font)              scaled to size 8.0pt on input line 475.
+[13]
 File: img/simulation1.png Graphic file (type bmp)
 <img/simulation1.png>
 File: img/simulation2.png Graphic file (type bmp)
 <img/simulation2.png>
+[14]
 File: img/simulation3.png Graphic file (type bmp)
 <img/simulation3.png>
 File: img/simulation4.png Graphic file (type bmp)
 <img/simulation4.png>
-[15] [16]
-File: img/CDT.png Graphic file (type bmp)
-<img/CDT.png>
-[17]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19] [20]
+[15] [16] [17] [18] [19]
 File: img/Experiment.png Graphic file (type bmp)
 <img/Experiment.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 754--755
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 741--742
 [][] 
  []
 
 File: img/waystostop.drawio.png Graphic file (type bmp)
 <img/waystostop.drawio.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 761--762
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 748--749
 [][] 
  []
 
-[21]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20] [21]
 File: img/jani2.png Graphic file (type bmp)
 <img/jani2.png>
 File: img/jani3.png Graphic file (type bmp)
 <img/jani3.png>
-[22] [23]
+[22]
 File: img/Case2-1.png Graphic file (type bmp)
 <img/Case2-1.png>
 File: img/Case2-2.png Graphic file (type bmp)
 <img/Case2-2.png>
 File: img/Case2-3.png Graphic file (type bmp)
 <img/Case2-3.png>
-[24] [25] (out/Paper.bbl [26] [27] [28]) [29] (out/Paper.aux)
+[23] [24] [25] (out/Paper.bbl [26] [27]) [28] (out/Paper.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01> patch level 1
@@ -511,12 +504,12 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5984 strings out of 474824
- 90517 string characters out of 5763823
- 1938387 words of memory out of 5000000
- 28150 multiletter control sequences out of 15000+600000
+ 5976 strings out of 474824
+ 90383 string characters out of 5763823
+ 1937387 words of memory out of 5000000
+ 28143 multiletter control sequences out of 15000+600000
  608150 words of font info for 124 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 100i,17n,110p,1060b,557s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,17n,110p,483b,557s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Paper.dvi (35 pages, 122000 bytes).
+Output written on out/Paper.dvi (34 pages, 121596 bytes).

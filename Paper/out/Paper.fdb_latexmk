@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex out/Paper"] 1706276059.0077 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1706276454.20298 0
+["bibtex out/Paper"] 1706373320.13093 "out/Paper.aux" "out/Paper.bbl" "out/Paper" 1706373352.68409 0
   "./citation.bib" 1706104993 14420 5d366317ff49ad2d8db919db152d7638 ""
   "./kuisunsrt.bst" 1558734156 22110 8367202202bd59402db2507285eff8fb ""
-  "out/Paper.aux" 1706276444 8413 da2572a2bc53521a281211ce945b1f56 "latex"
+  "out/Paper.aux" 1706373342 9326 2e128af7d8270de7255e4202e6281a2b "latex"
   (generated)
   "out/Paper.bbl"
   "out/Paper.blg"
   (rewritten before read)
-["dvipdf"] 1706276445.44783 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1706276454.21168 0
-  "out/Paper.dvi" 1706276444 121596 09e900ed62bba56885823fa02fb1d790 "latex"
+["dvipdf"] 1706373344.01944 "out/Paper.dvi" "out/Paper.pdf" "out/Paper" 1706373352.69148 0
+  "out/Paper.dvi" 1706373342 128520 8d2bd031d8b3d5279d883e48fab5f65c "latex"
   (generated)
   "out/Paper.pdf"
   (rewritten before read)
-["latex"] 1706276434.31043 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1706276454.20346 0
-  "Paper.tex" 1706276430 76805 7cc446194fdbbedc1c218efe0c35cda6 ""
-  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1706276430 76805 7cc446194fdbbedc1c218efe0c35cda6 ""
+["latex"] 1706373332.39016 "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" "out/Paper.dvi" "Paper" 1706373352.68447 0
+  "Paper.tex" 1706373324 79601 c8775aede72523b8ca1edb65aadadf96 ""
+  "c:/Users/reolo/OneDrive/ドキュメント/大学課題/MyPaper/robot_B4/Paper/Paper.tex" 1706373324 79601 c8775aede72523b8ca1edb65aadadf96 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1705622889 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1705621961 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1705621961 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -111,6 +111,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/tools/bm.sty" 1705631241 13231 2c742011581e2bf297e33520567d9464 ""
   "c:/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty" 1705631241 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "c:/texlive/2023/texmf-dist/tex/latex/url/url.sty" 1705631884 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
+  "c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty" 1705632324 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty" 1705632370 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "c:/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1705632521 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "c:/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty" 1705632548 8314 7803f78066c4f9d008405191a4b43073 ""
@@ -124,17 +125,18 @@
   "img/interface.png" 1706251473 381110 a663b9ab47036b24507351b0d510ae5f ""
   "img/jani2.png" 1705926254 1957653 d979d777392a49cd60a2535c8082c436 ""
   "img/jani3.png" 1705927642 1875032 b43cfc35b897ec81362c0f1a8602a2cd ""
+  "img/robovie.jpg" 1706346830 293134 98f1ce033e1e015cdf919125545a0adc ""
   "img/simulation1.png" 1706145547 19982 26555206515bbde7758e36839b9d1ac9 ""
   "img/simulation2.png" 1706145582 23404 4c552be8d94a8729cbfd779411a72c5a ""
   "img/simulation3.png" 1706145619 23890 8287604dce3e266531778e8e2478fd15 ""
   "img/simulation4.png" 1706145646 16670 4202045f0dab39bbbef8a56b7b21b750 ""
-  "img/system_compose.drawio.png" 1706270841 51654 d8819f0016d16dfc2e00de89e9ff48f6 ""
+  "img/system_compose.drawio.png" 1706338745 51838 8956e2cb14ad08422af558223d2d86e1 ""
   "img/waystostop.drawio.png" 1706140084 34603 c997e35a9cfc4a7dfede05bd26093d0a ""
   "kuisthesis.cls" 1558734156 226 efab6b93c6e85f7190899aa9184acc12 ""
   "kuisthesis.sty" 1580138156 27701 98cc74217aaba3648c8fc07e63a6bc7a ""
-  "out/Paper.aux" 1706276444 8413 da2572a2bc53521a281211ce945b1f56 "latex"
-  "out/Paper.bbl" 1706276059 5423 def63c845c77ebcba22c0e2ece37fd4d "bibtex out/Paper"
-  "out/Paper.toc" 1706276444 1560 bce2fdb0cc3b6051cf26f431f1ac2ff2 "latex"
+  "out/Paper.aux" 1706373342 9326 2e128af7d8270de7255e4202e6281a2b "latex"
+  "out/Paper.bbl" 1706373320 5423 98b33d0533280db1e25ebda1e0ddc1d0 "bibtex out/Paper"
+  "out/Paper.toc" 1706373342 2025 bcf316258b647027445573eeac450398 "latex"
   (generated)
   "out/Paper.aux"
   "out/Paper.dvi"

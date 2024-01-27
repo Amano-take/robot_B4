@@ -156,6 +156,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT c:/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
+INPUT c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 INPUT out/Paper.aux
 INPUT out/Paper.aux
 INPUT out/Paper.aux
@@ -201,14 +203,18 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-INPUT ./img/interface.png
-INPUT ./img/interface.png
-INPUT ./img/interface.png
-INPUT extractbb -B cropbox -O img/interface.png
+INPUT ./img/robovie.jpg
+INPUT ./img/robovie.jpg
+INPUT ./img/robovie.jpg
+INPUT extractbb -B cropbox -O img/robovie.jpg
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT ./img/system_compose.drawio.png
 INPUT extractbb -B cropbox -O img/system_compose.drawio.png
+INPUT ./img/interface.png
+INPUT ./img/interface.png
+INPUT ./img/interface.png
+INPUT extractbb -B cropbox -O img/interface.png
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/newpx/zpl-Regular-tlf-t1.tfm

@@ -234,6 +234,14 @@ INPUT ./img/simulation4.png
 INPUT ./img/simulation4.png
 INPUT ./img/simulation4.png
 INPUT extractbb -B cropbox -O img/simulation4.png
+INPUT ./img/speech_system_compose.drawio.png
+INPUT ./img/speech_system_compose.drawio.png
+INPUT ./img/speech_system_compose.drawio.png
+INPUT extractbb -B cropbox -O img/speech_system_compose.drawio.png
+INPUT ./img/recommend_system_compose.drawio.png
+INPUT ./img/recommend_system_compose.drawio.png
+INPUT ./img/recommend_system_compose.drawio.png
+INPUT extractbb -B cropbox -O img/recommend_system_compose.drawio.png
 INPUT ./img/Experiment.png
 INPUT ./img/Experiment.png
 INPUT ./img/Experiment.png

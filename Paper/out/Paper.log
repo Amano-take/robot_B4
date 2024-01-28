@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  28 JAN 2024 01:35
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.1.19)  28 JAN 2024 20:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -441,7 +441,7 @@ LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
 
 [1005] [1006]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 140.
+(Font)              scaled to size 10.0pt on input line 156.
 [1] [2] [3] [4] [5] [6] [7] [8]
 File: img/robovie.jpg Graphic file (type bmp)
 <img/robovie.jpg>
@@ -449,7 +449,7 @@ File: img/robovie.jpg Graphic file (type bmp)
 File: img/system_compose.drawio.png Graphic file (type bmp)
 <img/system_compose.drawio.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 420--421
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
@@ -459,8 +459,8 @@ File: img/interface.png Graphic file (type bmp)
 
 ] [11] [12]
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 492.
-[13] [14]
+(Font)              scaled to size 8.0pt on input line 508.
+[13]
 File: img/simulation1.png Graphic file (type bmp)
 <img/simulation1.png>
 File: img/simulation2.png Graphic file (type bmp)
@@ -469,22 +469,31 @@ File: img/simulation3.png Graphic file (type bmp)
 <img/simulation3.png>
 File: img/simulation4.png Graphic file (type bmp)
 <img/simulation4.png>
-[15] [16]
+[14] [15]
+File: img/speech_system_compose.drawio.png Graphic file (type bmp)
+<img/speech_system_compose.drawio.png>
+[16] [17]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18] [19] [20]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] [19]
+File: img/recommend_system_compose.drawio.png Graphic file (type bmp)
+<img/recommend_system_compose.drawio.png>
+[20]
 File: img/Experiment.png Graphic file (type bmp)
 <img/Experiment.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 777--778
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 799--800
 [][] 
  []
 
 File: img/waystostop.drawio.png Graphic file (type bmp)
 <img/waystostop.drawio.png>
 
-Overfull \hbox (22.66086pt too wide) in paragraph at lines 784--785
+Overfull \hbox (22.66086pt too wide) in paragraph at lines 806--807
 [][] 
  []
 
@@ -511,12 +520,12 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6062 strings out of 474824
- 91752 string characters out of 5763823
+ 6073 strings out of 474824
+ 92246 string characters out of 5763823
  1937387 words of memory out of 5000000
- 28223 multiletter control sequences out of 15000+600000
+ 28232 multiletter control sequences out of 15000+600000
  608150 words of font info for 124 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  100i,17n,110p,483b,563s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Paper.dvi (37 pages, 128520 bytes).
+Output written on out/Paper.dvi (37 pages, 127480 bytes).

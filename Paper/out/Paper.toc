@@ -7,11 +7,11 @@
 \contentsline {section}{\numberline {3}認知的不協和とは}{6}{}%
 \contentsline {section}{\numberline {4}研究の前提}{8}{}%
 \contentsline {subsection}{\numberline {4.1}抑止力の定義}{9}{}%
-\contentsline {subsection}{\numberline {4.2}シチュエーション}{9}{}%
+\contentsline {subsection}{\numberline {4.2}想定する状況}{9}{}%
 \contentsline {subsection}{\numberline {4.3}ロボット}{9}{}%
 \contentsline {section}{\numberline {5}提案手法}{10}{}%
 \contentsline {subsection}{\numberline {5.1}移動操作支援システム}{10}{}%
-\contentsline {subsection}{\numberline {5.2}発話支援システム}{17}{}%
+\contentsline {subsection}{\numberline {5.2}発話支援システム}{16}{}%
 \contentsline {subsubsection}{\numberline {5.2.1}有効な注意文言の検討}{17}{}%
 \contentsline {subsubsection}{\numberline {5.2.2}状況に応じた注意文言の推薦}{20}{}%
 \contentsline {section}{\numberline {6}ケーススタディ}{21}{}%

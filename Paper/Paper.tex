@@ -32,90 +32,106 @@
 そのためアバターロボットを介した勤務は今後ますます普及することが予想される。
 また様々な業務の中で重要とされる注意という行為において
 ロボットを介して行うことで、注意した相手とのトラブルを避けることができることも長所としてあげられる。
+
 しかし、ロボットによる注意には大きな問題点もある。
 それは注意するために必要な操作が難しいことと、注意したときに相手にその行動をやめさせる力、抑止力が欠如しているというものである。
-そこで本研究ではオペレータの支援を行うシステムの開発を行うことでこれらの問題を解決することを目標とし
-以降、アバターロボットを用いて警備員業務の中で歩きスマホを注意するシチュエーションを考える。
+そこで本研究ではオペレータの支援を行うシステムの開発を行うことでこれらの問題を解決することを目指す。
+また研究と実験を進めるにあたって、アバターロボットを用いた警備員業務の中で歩きスマホを注意するシチュエーションを考えた。
 
 %予備実験 理由の順番
-移動に関してロボットの歩行速度や人との遠近感をつかみづらいなどの理由から、
-予備実験では7人がロボットの近くで歩きスマホをしていたのに対し、実際に相手の視界に入って注意を行えたのは2人であった。
-そこでオペレータ支援のためにまず移動支援システムの開発を行った。
+
+ロボットの歩行速度や人との画面上で遠近感をつかみづらいなどの理由から、
+アバターロボットを用いた注意に求められる移動操作が困難であった。
+したがってまずオペレータ支援のために移動支援システムの開発を行った。
 これによってオペレータはカメラ映像上で歩きスマホをしている人の指定を行うだけでよく、システムが
-移動先の予測や、それに基づいた人の距離を保った移動、ロボットの向きの調整を担うことができる。
+移動先の予測や、それに基づいた人の距離を保った移動、ロボットの向きの調整を担う。
 %もう少し難しさをアピールできたら <- OK
 
 %抑止力の向上のために注意文言に注目して、 <- OK
-次に抑止力に関して、オペレータがとっさに有効な注意文言を考えるのは難しい。
-そのためオペレータに有効な注意文言を推薦するシステムの開発によって抑止力の向上を試みた。
-有効な注意文言についての検討にあたって、
-歩きスマホを注意されてもやめない人がいる理由を認知的不協和理論に基づき次のように仮定した。
-注意されたことで「歩きスマホは危険である」という信条と、「自分は歩きスマホをしている」という行動に関する認知とが矛盾することに気づかされ、
-その認知の矛盾によって不快感が生じ、その不快感の解消のために行動をやめる。
-しかしこの時
-行動をやめる以外にもこの不快感を解消する方法が3種類存在するため、
-歩きスマホをやめない人がいる。
-そこで、注意された人がどのような方法で不快感を解消したかを
-推定し、その解消方法に対抗する文言によって不快感の解消を難しくすることで、
-行動をやめさせることが可能になるつまり抑止力が高まるのではないかと考え、
-それぞれの解消方法に対抗する文言を考案した。それは(1)歩きスマホの危険性を強調するもの、
-(2)相手の言い逃れを防ぐもの、そして(3)相手を特定するものである。
+次に有効な注意文言を推薦する発話支援システムによって次に抑止力の欠如を解決できると考えた。
+なぜならオペレータが有効な注意文言をとっさに考え付くことが難しいために、抑止力の欠如が生じていると考えられるからである。
+この発話支援システムは、状況に応じた有効な注意文言と状況の判断を行うモデルを作成し、それらを用いてオペレータに推薦を行うことによって作成できる。
 
-しかし現段階ではオペレータに相手の解消方法を推定することが求められており、
-これは認知的不協和理論についての知識や相手の行動に対する洞察が必要となる。
-そのためどのような行動のときどの解消方法がとられたのか、
-またその注意文言はどれくらい有効なのかを明らかにするために
-%抽象化してもいいかも <- OK
-実際のフィールドで実験を行った。
-事前に協力をお願いした2人の参加者に対して注意されたときにどのように感じたかのアンケートを、
+そこでまず有効な注意文言に関して認知的不協和理論に基づいて検討する。
+ここで認知的不協和理論を用いた理由は、注意されても行動をやめない理由が説明可能になるからである。
+具体的に注意されたことで「歩きスマホは危険である」という信条と、「自分は歩きスマホをしている」という行動に関する認知とが矛盾することに気づかされ、
+その認知の矛盾によって不快感が生じ、その不快感の解消のために行動をやめる。
+しかしこの時行動をやめる以外にもこの不快感を解消できるため、これを注意されても歩きスマホをやめない人がいることの説明とできる。
+そこでとられた解消方法に対抗するような文言によって、不快感の解消を困難にし行動をやめるように誘導するできると考えられる。
+こうして有効と考えられる注意文言がとられた解消方法ごとに得られた。
+
+次にそれらの不快感の解消方法に基づく注意文言の推薦にあたり、解消方法を推定するモデルの構築のために実験を行った。
+解消方法の推定には認知的不協和理論についての知識や相手の行動に対する洞察が必要であり、
+解消方法の推定をオペレータが行うことは難しいため、解消方法の推定を行うモデルが必要となる。
+
+実験では事前に協力をお願いした2人の参加者に対して注意されたときにどのように感じたかのアンケートを、
 また歩きスマホをしていた5組のATCへの来客者に対して注意を行ったときの反応の観察を行なった。アンケートでは
-(3)の相手を特定する文言では、自分だけが注意されているという孤立感から周囲の圧力を感じることで無視することが難しくなった
+一部の注意文言が使用された際に、自分だけが注意されているという孤立感から周囲の圧力を感じることで無視することが難しくなった
 という意見が得られた。また実際の観察では、歩行速度やグループの人数といった属性の値によって解消方法を推定することができる可能性が示唆された。
 
-以上のように本研究では、移動操作の支援を行うシステムの開発と解消方法ごとの有効な文言の検討を行った。
-また実験の観察からはいくつかの値から解消方法の推定が行える可能性が示唆された。
-今後さらなる実験を行い解消方法の予測モデルを構築することで、
-オペレータに有効な文言を提示するシステムの構築が可能となる。
-またアンケートの結果からは、
-同調圧力によって歩きスマホをやめる可能性が見られた。そのため、
-同調圧力を用いた戦略を取り入れたシステムの構築も考えられる。
+以上のように本研究では移動操作の支援を行うシステムの開発を行い、また抑止力向上のための発話支援システムの開発に取り組んだ。
+発話支援システムの開発のためには、今後不快感の解消方法を推定するモデルの構築が必要であるが、
+実験の観察からいくつかの値から解消方法の推定が行える可能性が示唆された。またアンケートの結果からは、
+同調圧力に基づいた戦略を取り入れたシステムの構築も考えられる。
 %可能性がある。　できるようになる　<- OK
 \end{jabstract}
 
 
 \begin{eabstract}
-Avatar robots are becoming a new way of working, and it enable us to work remotely even in the field of business that requires physical work and can't be performed with such conventional remote work as using meeting apps.
-This is a great advantage of avatar robots because it eliminates the need for commuting and improves employees' work-life balance.
-Therefore, it is expected that work using avatar robots will become more and more popular in the future.
-In addition, one of the advantages of using avatar robots is that it is possible to avoid trouble with the person who is admonished through the robot.
+With the spread of avatar robots, working remotely via avatar is 
+gaining recognition as a new way of working. The major advantage of 
+avatar robots is that they enable remote work even for tasks that require 
+physical work, which has been difficult with such conventional remote work as using
+meeting applications. 
+Therefore, it is expected that work via Avatar robots 
+will become increasingly popular in the future. In addition, one of the advantages of using avatar robots is that
+it is possible to avoid trouble with the person who is admonished through
+the robot.
+
 However, there are some problems with admonishing through the robot.
-One of them is the difficulty of moving the robot required to admonishing.
-This is because the robot's maximum moving speed is set lower for safety reasons, and also it is difficult to grasp the sense of distance between the robot and the person.
-Another problem is the lack of deterrence when the robot gives admonishment.
-The person who is admonished through a robot does not feel that he or she is being admonished by a human being, and it is easy to ignore the robot and it's admonishment.
-In this research, we aim to solve these problems by developing a system to support the operator.
-In the following, we consider the situation where a security robot admonishes a person who is walking while using a smartphone.
+One is the difficulty of moving the robot required to
+admonishing, and the other is the lack of deterrence when admonishing.
+Therefore, in this study, we aim to solve these problems by developing a system to support operators.
+In addition, in order to conduct research and experiments, we considered a situation where a security 
+robot as avatar admonishes a person who is walking while using a smartphone.
 
-First, we developed a system to support the operation required to give someone admonishment.
-With This system, all the operator have to do is select the person who is walking while using a smartphone on the camera image. 
-Then, the system predicts the one's destination, and moves the robot with maintaining the distance between people, adjusts the direction of the robot based on the prediction.
+The speed of the robot's walking and the difficulty of grasping the sense of distance
+on the screen made it difficult to move the robot required for admonishing.
+Hence, we first developed a movement support system for operator support.
+With this system, the operator only needs to specify the person who is walking while using a smartphone
+on the camera image, and the system will predict the destination, move while maintaining the distance from the person,
+and adjust the orientation of the robot.
 
-Next, I considered that effective admonishment would improve the robot's deterrence.
-In order to consider effective admonitory words, we hypothesized that the following reason why admonished people sometimes do not change their behavior.
-They are aware of the contradiction between their belief that "walking while using a smartphone is dangerous" and their behavior of "walking while using a smartphone", and the discomfort caused by this contradiction would lead to change the behavior.
-However, there are three other ways to resolve this discomfort besides stopping the behavior, so some people do not stop the behavior.
-Therefore, we devised admonitory words that counteract each of these methods of resolution.
-However, at this stage, the operator is required to estimate the other person's method of resolution, which requires knowledge of cognitive dissonance theory and insight into the other person's behavior.
-Hence, in order to clarify which method of resolution was used and how effective the admonitory words were, we conducted an experiment in the field.
-We conducted a questionnaire survey on how the two participants who were asked for cooperation felt when they were given admonishment which counteracts the resolution, and observed the reactions of the five pairs of visitors who were walking while using a smartphone when they were given the admonishment.
-In the questionnaire survey, it was found that the feeling of isolation from being the only one being given one of devised admonishment  made it difficult to ignore the pressure from the surroundings.
-In the actual observation, it was suggested that the method of resolution could be estimated from the values of attributes such as walking speed and number of people in the group.
+Next, we considered that lack of deterrence could be solved by creating a speech support system that recommends effective admonishing words.
+This is because it is difficult to come up with effective admonishing words on the spot, which is considered to be the cause of the lack of deterrence.
+This speech support system can be developed by listing effective words according to situations, creating a model that makes judgments about situations 
+and recommending effective words according to the judged situation.
 
-In this research, we developed a system to support the moving operation and considered effective admonitory words for each method of resolution.
-From the observation of the experiment, it was suggested that the method of resolution could be estimated from some values.
-In the future, by conducting further experiments and constructing a prediction model for the method of resolution, it will be possible to construct a system that presents effective words to the operator.
-In addition, the results of the questionnaire survey showed that there is a possibility that walking while using a smartphone can be stopped by the pressure of conformity.
-Therefore, it is also possible to construct a system that incorporates a strategy using the pressure of conformity.
+Therefore, first, we considered effective admonishing words based on cognitive dissonance theory.
+The reason for using the theory is that it can explain why people do not stop walking while using a smartphone even if they are admonished.
+Specifically, when admonished, people realize that their cognitions are contradictory, 
+and they feel uncomfortable due to the contradiction in their cognition.
+However, this discomfort can be resolved not only by stopping the behavior, but also by other means, 
+so it can be explained why some people do not stop walking while using a smartphone.
+Thus, the admonitory words that prevent the discomfort from being resolved should induce the person to stop walking while using a smartphone.
+
+Next, in order to recommend admonishing words based on these methods of resolving discomfort, 
+we conducted an experiment to construct a model for estimating it.
+Estimating it requires knowledge of cognitive dissonance theory 
+and insight into the other person's behavior, so it is difficult for the operator, and a model is needed.
+
+In the experiment, we conducted a questionnaire on how two participants who had been asked for cooperation felt 
+when they were admonished, and observed the reactions of five pairs of visitors when they were admonished.
+In the questionnaire, it was found that in some cases,
+it was difficult to ignore them because of the feeling of isolation and the feeling of pressure from the surroundings. 
+In the actual observation, it was suggested that the method of resolving 
+discomfort could be estimated depending on the values such as walking speed 
+and the number of people in the group.
+
+Thus, in this study, we developed a system to support the movement operation and a speech support system to improve the deterrence.
+In order to develop the speech support system, it is necessary to construct a model that estimates the method of resolving discomfort in the future, 
+but it was suggested from the observation of the experiment that it could be estimated from some values. In addition, from the results of the questionnaire, it is also possible to construct a system that incorporates a strategy based on conformity pressure.
+
 \end{eabstract}
 %=====================================================================================
 
@@ -151,9 +167,9 @@ Therefore, it is also possible to construct a system that incorporates a strateg
 例えば\cite{FERREIRA202170}では、企業が地理的制約なしに優秀な人材を獲得できることや、
 オフィスの維持費や交通費を削減できることがあげられている。
 
-他のアバターロボットのメリットとしては、身体障碍を持つ人が
-身体労働をともなう業務に従事することを可能にすることがあげられる。
-さらにその際に、身体障碍を持つ人の社会参加感や精神的充足感をもたらすことがわかっている\cite{takeuchi2020avatar}。
+%その他のアバターロボットのメリットとしては、身体障碍を持つ人が
+%身体労働をともなう業務に従事することを可能にすることがあげられる。
+%さらにその際に、身体障碍を持つ人の社会参加感や精神的充足感をもたらすことがわかっている\cite{takeuchi2020avatar}。
 またアバターロボットは自律ロボットでは難しかった人との柔軟なコミュニケーションが可能である。
 現時点で自律ロボットは人の表情や声のトーン、仕草などを読み取り相手の感情を推測することが困難であることや、
 音声認識の問題などから人とのコミュニケーションにおいて限界があるが、
@@ -381,8 +397,8 @@ HRI分野における適用例も多いが、それらのほとんどは結果�
 本研究において「抑止力」を\textbf{社会的規範に背く行動を行っている相手に対して、注意を行った際にその行動をやめさせる力}と定義する。
 つまり抑止力の高い注意とは、注意を受けた際にその注意を無視して行動を続けることが難しいようなものである。
 
-\subsection{シチュエーション}
-実験研究を進めるうえでアバターロボットが注意するシチュエーションとして警備員業務を想定し、
+\subsection{想定する状況}
+実験研究を進めるうえでアバターロボットが注意する状況として警備員業務を想定し、
 その中で注意すべき行動を[4,6]と同じように歩きスマホとした。これは、歩きスマホがもっともよく観測
 される迷惑行為であり、実際にやめたかどうかを確認することが容易であるためである。
 
@@ -517,22 +533,8 @@ G_x = H'_x + V_{hx}t\\
 G_y = H'_y + V_{hy}t
 \end{array}\right.
 \end{equation}
-さらに人の進行方向を正面と仮定すると、人と対面するための向き$\theta$は\\
-\begin{equation}
-  \label{eq: theta}
-  \theta = 
-  \begin{cases}
-    \arctan{\frac{V_{hy}}{V_{hx}}}  + \pi & (V_{hx} > 0)\\
-    \arctan{\frac{V_{hy}}{V_{hx}}} & (V_{hx} < 0)\\
-    \frac{\pi}{2} & (V_{hx} = 0, V_{hy} < 0)\\
-    -\frac{\pi}{2} & (V_{hx} = 0, V_{hy} > 0)\\
-  \end{cases}
-\end{equation}
-のようにして求められる。\\
-\quad このようにしてゴールポーズを求めることができた。ここでゴールポーズとは目標となる位置と向き(クォータニオン)のことであり、
-位置は式\ref{eq: G}で求められた$(G_x, G_y)$であり、向きは
-ロボットの回転軸がz軸(鉛直方向)であり回転角度は式\ref{eq: theta}で求められた$\theta$であることから、$(0, 0, \sin\frac{\theta}{2}, \cos\frac{\theta}{2})$と求められる。
-
+さらに人の進行方向を正面と仮定することで、人と対面することで向き$\theta$が求められる。\\
+\quad このようにしてゴールポーズを求めることができた。ここでゴールポーズとは目標となる位置と向きのことである。
   \item 追従計算 \\
   \quad 人になるべくついていくためのゴールポーズを求める。そのためには、ロボットの速度ベクトルの向きは人の速度ベクトルの向きと同じになるようし、
   またその際のロボットの向きは人の向きになるようにする。よってゴールとなる位置$(G_x, G_y)$は\ref{fig: variable}で定義した変数を用いて以下のように表される。
@@ -586,7 +588,7 @@ G_y = H'_y + V_{hy}t
 ロボットと人の距離が近くなりすぎる場合がある。そのような時はロボットの向きはそのままに人から遠ざかるように動く。
 その後薄青色の円から出た場合は追従を諦め立ち止まる。
   \item 移動方法計算 \\
-  \quad 既存のソフトウェアであり発行されたゴールポーズを目指し障害物を避けながら、robotに対して移動速度、回転速度についての指令を行う。
+  \quad 既存のソフトウェアであり発行されたゴールポーズを目指し障害物を避けながら、ロボットに対して移動速度、回転速度についての指令を行う。
 
   \item インターフェース \\
   \quad ロボットに備え付けられたカメラから受け取った画像データをもとにして
@@ -616,10 +618,21 @@ G_y = H'_y + V_{hy}t
 
 
 \subsection{発話支援システム}
+
+
 \cite{Schneider2022}では効果的な注意文言を用いることで抑止力が高まることが分かっている。
-しかしオペレータがとっさにその面する状況に対して効果的な文言を考えることは難しい。そこで有効な注意文言の推薦を行う発話支援システムの開発によって抑止力を高めることを目指す。
-有効な注意文言の検討と、状況に応じそれらを推薦するシステムの構築によってこの発話支援システムが作成可能であると考え、
-以下ではそれぞれについての議論を行う。
+しかしオペレータがとっさにその直面する状況に対して効果的な文言を考えることは難しい。そこで
+有効な注意文言の推薦を行う発話支援システムの開発によって抑止力を高めることを目指す。
+図\ref{pic:speechcompose}のように注意文言データと、状況からその中で有効なものを推薦するシステムの構築
+によって発話支援システムが作成可能であると考えた。以下ではそれぞれについての議論を行う。
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/speech\_system\_compose.drawio.png}
+  \caption{発話支援システムの構成案}
+  \label{pic:speechcompose}
+\end{figure}
+
+
 
 なおこの発話支援は1度目の注意が無視された時に、次にかけるべき2度目の注意発話に対して行うことを想定している。
 \subsubsection{有効な注意文言の検討}
@@ -627,7 +640,7 @@ G_y = H'_y + V_{hy}t
 有効な注意文言とは、\ref{sec: CDT}章で述べた中で「行動を変える」以外の解消方法に対抗するようなものである。
 なぜならば、注意されてもスマホをやめない人は
 注意によって生じた不快感を解消するために、\ref{sec: CDT}章で述べた解消方法の中で「行動を変える」以外のいずれか
-を用いており、この解消方法に対抗するような注意によって不快感の解消を困難にし、
+を用いており、この解消方法に対抗するような注意によって不快感の解消を困難にし
 再度不快感の解消を強いることで、「行動を変える」という解消方法をとらせる、つまり歩きスマホをやめさせることができると考えられるからである。
 以下では不快感の解消はどのようにして起こるのかについて説明を行ったうえで、その後それらに対抗する具体的な文言について議論を行う。
 
@@ -755,20 +768,29 @@ G_y = H'_y + V_{hy}t
 \end{table}
 
 \subsubsection{状況に応じた注意文言の推薦}
-\label{sec: recommend}
+
 有効な注意文言の推薦のためには解消方法推定モデルの構築を行う必要がある。
 なぜなら\ref{sec: effective}章で解消方法に応じた有効な注意文言について考察したが、
-それらの推薦のためには、注意された人の解消方法を推定する必要があり、
+それらの推薦のためには、図\ref{pic:speechcompose}の注意時の状況として注意された人の解消方法を入力する必要があり、
 これには認知的不協和理論に関する知識や注意された人の行動への洞察が求められる。
-したがって有用な発話支援システムのためには、解消方法の推定をシステムが担う必要があるからである。
-以下ではそのために、どのような状況がどのような解消方法を意味するかについての調査を行った。
+したがって誰にとっても有用な発話支援システムのためには、解消方法の推定をシステム側で担う必要があるからである。
+そのため、実際に作るべきシステムは図\ref{pic:recommendcompose}のようになると考えられる。
+\label{sec: recommend}
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/recommend\_system\_compose.drawio.png}
+  \caption{有用な発話支援システムの構成案}
+  \label{pic:recommendcompose}
+\end{figure}
+以下では解消方法予測を行うためにモデル構築にかかわる調査を行った。
 
 
 \section{ケーススタディ}
 \subsection{実験目的}
 \ref{sec: effective}で提案した文言による注意が有効であるかについて調べる必要がある。そのためそれら文言による注意を行い、
 その後どのように感じたかについてのインタビューを行った。
-また解消方法の予測モデルの構築のため、どのような状況がどの解消方法を意味するかを調べることを目的としたケーススタディをおこなった。
+また解消方法の予測モデルの構築のため、注意時の状況から注意された人の認知の状態そしてどの解消方法が取られたかについてを調べること
+を目的としたケーススタディをおこなった。
 
 \subsection{実験方法}
 警備員の格好をしたアバターロボットを用い、大型のショッピングモールであるATC\footnote{https://www.atc-co.com/}の中で、歩きスマホをしている参加者に対して注意喚起を行った。また注意喚起の際に、アバターロボットを操作するためのインターフェースを用いた。
@@ -818,7 +840,7 @@ G_y = H'_y + V_{hy}t
 \end{figure}
 インタビューでは次のような意見が得られた。
 \begin{itemize}
-  \item 容姿の特徴を述べる注意文言用いた時に、自分が特定されていることで孤立感を感じ無視することが難しかった。
+  \item 容姿の特徴を述べる注意文言をかけられた時に、自分が特定されていることで孤立感を感じ無視することが難しかった。
         また容姿の特徴を述べることによって周囲の人間の注目を集め、無視した際に周囲の人間からの怪訝なまなざしを向けられることも無視しづらい要因であった。
   \item 歩きスマホの危険性を強調する注意文言では、抑止力はかなり弱かった。
   \item 自分がロボットに注意されるのを目撃した他の歩きスマホをしている人は、歩くのをやめてその場で立ち止まって携帯を触っていた。
@@ -921,7 +943,7 @@ Case2では行きたい方向の逆方向に歩いていたことから、地図
 これにより、オペレータはカメラ映像上で人をクリックするだけで、その人に適切に追従することができるようになった。
 
 ロボットに注意されたときにたかがロボットと侮られ無視されやすいことに加えて、
-オペレータが効果的な注意文言をとっさに考え付くことが難しいために注意時の抑止力が欠如しているという問題を
+オペレータが効果的な注意文言をとっさに考え付くことが難しいことから生じる抑止力の欠如を
 効果的な注意文言を推薦するような発話支援システムを作成することで解決できると考えた。
 
 そこで第二に発話支援システムの構築に当たり、まず効果的な文言がどのようなものであるかについて認知的不協和理論に基づき考察を行い、

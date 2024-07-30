@@ -1,120 +1,67 @@
 \begin{thebibliography}{10}
 
-\bibitem{chen2007human}
-Jessie~YC Chen, Ellen~C Haas, and Michael~J Barnes.
-\newblock Human performance issues and user interface design for teleoperated
-  robots.
-\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C
-  (Applications and Reviews)}, Vol.~37, No.~6, pp. 1231--1245, 2007.
-
-\bibitem{Daneshmand2023}
-Morteza Daneshmand, Jani Even, and Takayuki Kanda.
-\newblock Effortless polite telepresence using intention recognition.
-\newblock {\em J. Hum.-Robot Interact.}, dec 2023.
-\newblock Just Accepted.
+\bibitem{ozimek2020future}
+Ozimek, A.: The future of remote work, {\em Available at SSRN 3638597\/} (2020).
 
 \bibitem{FERREIRA202170}
-Rafael Ferreira, Ruben Pereira, Isaias~Scalabrin Bianchi, and Miguel~Mira {da
-  Silva}.
-\newblock Decision factors for remote work adoption: Advantages, disadvantages,
-  driving forces and challenges.
-\newblock {\em Journal of Open Innovation: Technology, Market, and Complexity},
-  Vol.~7, No.~1, p.~70, 2021.
-
-\bibitem{Festinger1957}
-Leon Festinger.
-\newblock {\em A theory of cognitive dissonance.}
-\newblock Stanford University Press, 1957.
-
-\bibitem{hainsworth2001teleoperation}
-David~W Hainsworth.
-\newblock Teleoperation user interfaces for mining robotics.
-\newblock {\em Autonomous robots}, Vol.~11, No.~1, pp. 19--28, 2001.
-
-\bibitem{herse2018you}
-Sarita Herse, Jonathan Vitale, Meg Tonkin, Daniel Ebrahimian, Suman Ojha,
-  Benjamin Johnston, William Judge, and Mary-Anne Williams.
-\newblock Do you trust me, blindly? factors influencing trust towards a robot
-  recommender system.
-\newblock In {\em 2018 27th IEEE international symposium on robot and human
-  interactive communication (RO-MAN)}, pp. 7--14. IEEE, 2018.
-
-\bibitem{Kanda2010}
-Takayuki Kanda, Masahiro Shiomi, Zenta Miyashita, Hiroshi Ishiguro, and
-  Norihiro Hagita.
-\newblock A communication robot in a shopping mall.
-\newblock {\em IEEE Transactions on Robotics}, Vol.~26, No.~5, pp. 897--913,
-  2010.
-
-\bibitem{Midden2009}
-Cees Midden and Jaap Ham.
-\newblock Using negative and positive social feedback from a robotic agent to
-  save energy.
-\newblock In {\em Proceedings of the 4th International Conference on Persuasive
-  Technology}, Persuasive '09, New York, NY, USA, 2009. Association for
-  Computing Machinery.
-
-\bibitem{Mizumaru2019}
-Kazuki Mizumaru, Satoru Satake, Takayuki Kanda, and Tetsuo Ono.
-\newblock Stop doing it! approaching strategy for a robot to admonish
-  pedestrians.
-\newblock In {\em 2019 14th ACM/IEEE International Conference on Human-Robot
-  Interaction (HRI)}, pp. 449--457, 2019.
-
-\bibitem{mumm2011human}
-Jonathan Mumm and Bilge Mutlu.
-\newblock Human-robot proxemics: physical and psychological distancing in
-  human-robot interaction.
-\newblock In {\em Proceedings of the 6th international conference on
-  Human-robot interaction}, pp. 331--338, 2011.
-
-\bibitem{paradeda2019makes}
-Raul Paradeda, Maria~Jos{\'e} Ferreira, Raquel Oliveira, Carlos Martinho, and
-  Ana Paiva.
-\newblock What makes a good robotic advisor? the role of assertiveness in
-  human-robot interaction.
-\newblock In {\em Social Robotics: 11th International Conference, ICSR 2019,
-  Madrid, Spain, November 26--29, 2019, Proceedings 11}, pp. 144--154.
-  Springer, 2019.
-
-\bibitem{sandoval2016can}
-Eduardo~Ben{\'\i}tez Sandoval, J{\"u}rgen Brandstetter, and Christoph Bartneck.
-\newblock Can a robot bribe a human? the measurement of the negative side of
-  reciprocity in human robot interaction.
-\newblock In {\em 2016 11th ACM/IEEE International Conference on Human-Robot
-  Interaction (HRI)}, pp. 117--124. IEEE, 2016.
+Ferreira, R., Pereira, R., Bianchi, I.~S. and {da Silva}, M.~M.: Decision Factors for Remote Work Adoption: Advantages, Disadvantages, Driving Forces and Challenges, {\em Journal of Open Innovation: Technology, Market, and Complexity\/},  Vol.~7, No.~1, p.~70 (2021).
 
 \bibitem{Schneider2022}
-Sebastian Schneider, Yuyi Liu, Kanako Tomita, and Takayuki Kanda.
-\newblock Stop ignoring me! on fighting the trivialization of social robots in
-  public spaces.
-\newblock {\em J. Hum.-Robot Interact.}, Vol.~11, No.~2, feb 2022.
+Schneider, S., Liu, Y., Tomita, K. and Kanda, T.: Stop Ignoring Me! On Fighting the Trivialization of Social Robots in Public Spaces, {\em J. Hum.-Robot Interact.\/},  Vol.~11, No.~2 (2022).
 
-\bibitem{son2011measuring}
-Hyoung~Il Son, Lewis~L Chuang, Antonio Franchi, Junsuk Kim, Dongjun Lee,
-  Seong-Whan Lee, Heinrich~H B{\"u}lthoff, and Paolo~Robuffo Giordano.
-\newblock Measuring an operator's maneuverability performance in the haptic
-  teleoperation of multiple robots.
-\newblock In {\em 2011 IEEE/RSJ International Conference on Intelligent Robots
-  and Systems}, pp. 3039--3046. IEEE, 2011.
+\bibitem{Festinger1957}
+Festinger, L.: {\em A theory of cognitive dissonance.\/}, Stanford University Press (1957).
 
-\bibitem{takeuchi2020avatar}
-Kazuaki Takeuchi, Yoichi Yamazaki, and Kentaro Yoshifuji.
-\newblock Avatar work: Telework for disabled people unable to go outside by
-  using avatar robots.
-\newblock In {\em Companion of the 2020 ACM/IEEE International Conference on
-  Human-Robot Interaction}, pp. 53--60, 2020.
+\bibitem{woods2006methodological}
+Woods, S.~N., Walters, M.~L., Koay, K.~L. and Dautenhahn, K.: Methodological issues in HRI: A comparison of live and video-based methods in robot to human approach direction trials,  {\em ROMAN 2006-the 15th IEEE international symposium on robot and human interactive communication\/}, IEEE, pp.\ 51--58 (2006).
 
-\bibitem{triantafyllidis2020study}
-Eleftherios Triantafyllidis, Christopher Mcgreavy, Jiacheng Gu, and Zhibin Li.
-\newblock Study of multimodal interfaces and the improvements on teleoperation.
-\newblock {\em IEEE Access}, Vol.~8, pp. 78213--78227, 2020.
+\bibitem{joosse2021making}
+Joosse, M., Lohse, M., Berkel, N.~V., Sardar, A. and Evers, V.: Making appearances: How robots should approach people, {\em ACM Transactions on Human-Robot Interaction (THRI)\/},  Vol.~10, No.~1, pp.\ 1--24 (2021).
+
+\bibitem{satake2009approach}
+Satake, S., Kanda, T., Glas, D.~F., Imai, M., Ishiguro, H. and Hagita, N.: How to approach humans? Strategies for social robots to initiate interaction,  {\em Proceedings of the 4th ACM/IEEE international conference on Human robot interaction\/}, pp.\ 109--116 (2009).
+
+\bibitem{Mizumaru2019}
+Mizumaru, K., Satake, S., Kanda, T. and Ono, T.: Stop Doing it! Approaching Strategy for a Robot to Admonish Pedestrians,  {\em 2019 14th ACM/IEEE International Conference on Human-Robot Interaction (HRI)\/}, pp.\ 449--457 (2019).
 
 \bibitem{washburn2022exploring}
-Andrew Washburn, Kripash Shrestha, Habib Ahmed, Dave Feil-Seifer, and Hung~Manh
-  La.
-\newblock Exploring human compliance toward a package delivery robot.
-\newblock In {\em 2022 IEEE 3rd International Conference on Human-Machine
-  Systems (ICHMS)}, pp. 1--6. IEEE, 2022.
+Washburn, A., Shrestha, K., Ahmed, H., Feil-Seifer, D. and La, H.~M.: Exploring Human Compliance Toward a Package Delivery Robot,  {\em 2022 IEEE 3rd International Conference on Human-Machine Systems (ICHMS)\/}, IEEE, pp.\ 1--6 (2022).
+
+\bibitem{herse2018you}
+Herse, S., Vitale, J., Tonkin, M., Ebrahimian, D., Ojha, S., Johnston, B., Judge, W. and Williams, M.-A.: Do you trust me, blindly? Factors influencing trust towards a robot recommender system,  {\em 2018 27th IEEE international symposium on robot and human interactive communication (RO-MAN)\/}, IEEE, pp.\ 7--14 (2018).
+
+\bibitem{sandoval2016can}
+Sandoval, E.~B., Brandstetter, J. and Bartneck, C.: Can a robot bribe a human? The measurement of the negative side of reciprocity in human robot interaction,  {\em 2016 11th ACM/IEEE International Conference on Human-Robot Interaction (HRI)\/}, IEEE, pp.\ 117--124 (2016).
+
+\bibitem{Midden2009}
+Midden, C. and Ham, J.: Using Negative and Positive Social Feedback from a Robotic Agent to Save Energy,  {\em Proceedings of the 4th International Conference on Persuasive Technology\/}, Persuasive '09, New York, NY, USA, Association for Computing Machinery (2009).
+
+\bibitem{paradeda2019makes}
+Paradeda, R., Ferreira, M.~J., Oliveira, R., Martinho, C. and Paiva, A.: What makes a good robotic advisor? The role of assertiveness in human-robot interaction,  {\em Social Robotics: 11th International Conference, ICSR 2019, Madrid, Spain, November 26--29, 2019, Proceedings 11\/}, Springer, pp.\ 144--154 (2019).
+
+\bibitem{chen2007human}
+Chen, J.~Y., Haas, E.~C. and Barnes, M.~J.: Human performance issues and user interface design for teleoperated robots, {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)\/},  Vol.~37, No.~6, pp.\ 1231--1245 (2007).
+
+\bibitem{triantafyllidis2020study}
+Triantafyllidis, E., Mcgreavy, C., Gu, J. and Li, Z.: Study of multimodal interfaces and the improvements on teleoperation, {\em IEEE Access\/},  Vol.~8, pp.\ 78213--78227 (2020).
+
+\bibitem{son2011measuring}
+Son, H.~I., Chuang, L.~L., Franchi, A., Kim, J., Lee, D., Lee, S.-W., B{\"u}lthoff, H.~H. and Giordano, P.~R.: Measuring an operator's maneuverability performance in the haptic teleoperation of multiple robots,  {\em 2011 IEEE/RSJ International Conference on Intelligent Robots and Systems\/}, IEEE, pp.\ 3039--3046 (2011).
+
+\bibitem{hainsworth2001teleoperation}
+Hainsworth, D.~W.: Teleoperation user interfaces for mining robotics, {\em Autonomous robots\/},  Vol.~11, No.~1, pp.\ 19--28 (2001).
+
+\bibitem{Daneshmand2023}
+Daneshmand, M., Even, J. and Kanda, T.: Effortless Polite Telepresence Using Intention Recognition, {\em J. Hum.-Robot Interact.\/} (2023).
+\newblock Just Accepted.
+
+\bibitem{mumm2011human}
+Mumm, J. and Mutlu, B.: Human-robot proxemics: physical and psychological distancing in human-robot interaction,  {\em Proceedings of the 6th international conference on Human-robot interaction\/}, pp.\ 331--338 (2011).
+
+\bibitem{Kanda2010}
+Kanda, T., Shiomi, M., Miyashita, Z., Ishiguro, H. and Hagita, N.: A Communication Robot in a Shopping Mall, {\em IEEE Transactions on Robotics\/},  Vol.~26, No.~5, pp.\ 897--913 (2010).
+
+\bibitem{takeuchi2020avatar}
+Takeuchi, K., Yamazaki, Y. and Yoshifuji, K.: Avatar work: Telework for disabled people unable to go outside by using avatar robots,  {\em Companion of the 2020 ACM/IEEE International Conference on Human-Robot Interaction\/}, pp.\ 53--60 (2020).
 
 \end{thebibliography}

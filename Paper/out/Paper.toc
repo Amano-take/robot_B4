@@ -1,35 +1,27 @@
-\contentsline {chapter}{\numberline {第1章}はじめに}{2}{}%
-\contentsline {section}{\numberline {1.1}研究背景}{2}{}%
-\contentsline {subsection}{\numberline {1.1.1}アバターロボットと抱える問題}{2}{}%
-\contentsline {subsection}{\numberline {1.1.2}認知的不協和とは}{3}{}%
-\contentsline {subsubsection}{行動を変える}{3}{}%
-\contentsline {subsubsection}{認知を変える}{4}{}%
-\contentsline {subsubsection}{新たな認知の追加}{4}{}%
-\contentsline {subsubsection}{矮小化、無視}{4}{}%
-\contentsline {section}{\numberline {1.2}研究目的}{4}{}%
-\contentsline {chapter}{\numberline {第2章}関連研究}{6}{}%
-\contentsline {section}{\numberline {2.1}認知的不協和のHRIへの適用研究}{6}{}%
-\contentsline {section}{\numberline {2.2}説得のために否定的なフィードバック・行動をとるロボット}{7}{}%
-\contentsline {section}{\numberline {2.3}テレオペレーション支援に関する研究}{7}{}%
-\contentsline {chapter}{\numberline {第3章}提案手法}{8}{}%
-\contentsline {section}{\numberline {3.1}不快感の解消方法に基づく注意文言の提示}{8}{}%
-\contentsline {subsection}{\numberline {3.1.1}生じる不快感}{8}{}%
-\contentsline {subsection}{\numberline {3.1.2}考えられる不快感の解消方法と有効な注意文言}{9}{}%
-\contentsline {subsubsection}{行動を変える}{9}{}%
-\contentsline {subsubsection}{認知を変える}{9}{}%
-\contentsline {subsubsection}{新たな認知の追加}{10}{}%
-\contentsline {subsubsection}{矮小化、無視}{10}{}%
-\contentsline {subsection}{\numberline {3.1.3}用意した文言}{11}{}%
-\contentsline {section}{\numberline {3.2}移動操作の簡単化}{11}{}%
-\contentsline {subsubsection}{人位置計算}{12}{}%
-\contentsline {subsubsection}{速度計算}{12}{}%
-\contentsline {subsubsection}{ゴール計算}{13}{}%
-\contentsline {subsubsection}{インターフェース}{13}{}%
-\contentsline {subsubsection}{移動方法計算}{14}{}%
-\contentsline {chapter}{\numberline {第4章}評価実験}{15}{}%
-\contentsline {section}{\numberline {4.1}実験方法}{15}{}%
-\contentsline {section}{\numberline {4.2}実験結果}{15}{}%
-\contentsline {section}{\numberline {4.3}考察}{15}{}%
-\contentsline {chapter}{\numberline {第5章}まとめ}{16}{}%
-\contentsline {chapter}{謝辞}{17}{}%
-\contentsline {chapter}{参考文献}{17}{}%
+\contentsline {section}{\numberline {1}はじめに}{1}{}%
+\contentsline {section}{\numberline {2}関連研究}{3}{}%
+\contentsline {subsection}{\numberline {2.1}ロボットの接近行動に関する研究}{3}{}%
+\contentsline {subsection}{\numberline {2.2}認知的不協和のHRIへの適用研究}{4}{}%
+\contentsline {subsection}{\numberline {2.3}説得のために否定的な行動をとるロボット}{5}{}%
+\contentsline {subsection}{\numberline {2.4}テレオペレーション支援に関する研究}{6}{}%
+\contentsline {section}{\numberline {3}認知的不協和とは}{6}{}%
+\contentsline {section}{\numberline {4}研究の前提}{8}{}%
+\contentsline {subsection}{\numberline {4.1}抑止力の定義}{9}{}%
+\contentsline {subsection}{\numberline {4.2}想定する状況}{9}{}%
+\contentsline {subsection}{\numberline {4.3}ロボット}{9}{}%
+\contentsline {section}{\numberline {5}提案手法}{10}{}%
+\contentsline {subsection}{\numberline {5.1}移動操作支援システム}{10}{}%
+\contentsline {subsection}{\numberline {5.2}発話支援システム}{16}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}有効な注意文言の検討}{17}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}状況に応じた注意文言の推薦}{20}{}%
+\contentsline {section}{\numberline {6}ケーススタディ}{21}{}%
+\contentsline {subsection}{\numberline {6.1}実験目的}{21}{}%
+\contentsline {subsection}{\numberline {6.2}実験方法}{21}{}%
+\contentsline {subsection}{\numberline {6.3}実験参加者}{22}{}%
+\contentsline {subsection}{\numberline {6.4}インタビュー結果}{22}{}%
+\contentsline {subsection}{\numberline {6.5}ケーススタディ結果}{23}{}%
+\contentsline {subsection}{\numberline {6.6}実験結果の考察}{24}{}%
+\contentsline {section}{\numberline {7}今後の課題}{26}{}%
+\contentsline {section}{\numberline {8}まとめ}{26}{}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }謝辞}{27}{}%
+\contentsline {section}{\hbox to\@tempdima {\hfil }参考文献}{27}{}%

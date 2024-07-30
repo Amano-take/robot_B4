@@ -20,7 +20,7 @@
 	<param name="format" value="wave"/>
 </node>
 
-<!-- PLAY SOUND from robot 
+<!-- PLAY SOUND from robot -->
 <node name="audio_play_robot" pkg="audio_play" type="audio_play" output="screen">
 	<remap from="audio" to="audio_robot"/>
 	<param name="device" value=""/>
@@ -29,7 +29,7 @@
 	<param name="sample_format" value="S16LE"/>
 	<param name="format" value="wave"/>
 </node>
--->
+
 
 <node name="audio_capture_operator_mic" pkg="audio_capture" type="audio_capture" output="screen">
 	<remap from="audio" to="audio_operator"/>
@@ -49,16 +49,18 @@
 	<param name="sample_format" value="S16LE"/>
 	<param name="format" value="wave"/>
 </node>
--->
+	-->
+
 
 <!-- JOYSTICK -->
 
-<!-- JOY
+<!-- JOY -->
 <arg name="remote_joy/joystick_dev" default="/dev/input/js0"/>
 
 
+<arg name="remote_joy/use_side_vel" default="true" />
 <arg name="remote_joy/max_linear_vel" default="0.8" />
-<arg name="remote_joy/max_side_vel" default="0.001" />
+<arg name="remote_joy/max_side_vel" default="0.8" />
 <arg name="remote_joy/max_angular_vel" default="0.8" />
 <arg name="remote_joy/timeout_duration" default="-1" />
 
@@ -66,23 +68,23 @@
 <node respawn="true" pkg="joy" type="joy_node" name="remote_joy_node" >
 	<param name="dev" type="string" value="$(arg remote_joy/joystick_dev)" />
 	<remap from="joy" to="remote_joy_node/joy" />
-</node> -->
+</node> 
 
 
 
-<!-- JOYSTICK TELEOP 
-<node respawn="true" pkg="joy_teleop" type="joy_teleop_node" name = "remote_joystick_teleop">
-    <param name="activate_button_id" value="1" type="int" />
+<!-- JOYSTICK TELEOP -->
+<node respawn="true" pkg="joystick_teleop" type="joystick_teleop_node" name = "remote_joystick_teleop">
+    <param name="activate_button_id" value="4" type="int" />
     <param name="axis_side_id" value="0" type="int" />
-    <param name="axis_linear_id" value="5" type="int" />
-    <param name="axis_angular_id" value="2" type="int" />
+    <param name="use_side_vel" value="true" type="bool" />
+    <param name="axis_linear_id" value="1" type="int" />
+    <param name="axis_angular_id" value="3" type="int" />
     <param name="max_linear_vel" value="$(arg remote_joy/max_linear_vel)" type="double" />
-    <param name="max_side_vel" value="0.0" type="double" />
+    <param name="max_side_vel" value="0.8" type="double" />
     <param name="max_angular_vel" value="$(arg remote_joy/max_angular_vel)" type="double" />
     <param name="timeout_duration" value="$(arg remote_joy/timeout_duration)" type="double" />
     <remap from="~joy" to="remote_joy_node/joy" />
 </node>
--->
 
 <!-- CAMERA TF -->
 <node pkg="tf2_ros" type="static_transform_publisher" name="camera_tf" args="$(arg camera_pose) base_link head_camera" />
@@ -114,7 +116,8 @@
 <!-- PUBLISH GOAL POSE -->
 <node pkg="amano_b4" type="publish_position.py" name="pub_point"   output="screen"/>
 
-<!-- OPERATE WITH KEYBOARD -->
+	<!-- OPERATE WITH KEYBOARD 
 <node pkg="amano_b4" type="keyboard_move.py" name="keyboardMove" />
+	-->
 
 </launch>

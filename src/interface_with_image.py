@@ -66,6 +66,7 @@ class interface():
                     x1 -= a / 2
                 y1, y2 = min(y1, y2), max(y1, y2)
                 if vv is None:
+                    continue
                     strcol = 0
                     vv = 0
                 elif vv < 0.8:
